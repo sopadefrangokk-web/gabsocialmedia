@@ -17,11 +17,56 @@
     overflow-x: hidden;
     scroll-behavior: auto;
   }
+
+  h1, h2, h3 {
+    font-family: var(--font-display), var(--font-sans), system-ui, sans-serif;
+  }
 }
 
 .font-serif-italic {
   font-family: var(--font-serif);
   font-style: italic;
+}
+
+.font-display {
+  font-family: var(--font-display), var(--font-sans), system-ui, sans-serif;
+  letter-spacing: -0.02em;
+}
+
+/* Headline chamativa com glow neon */
+.headline-glow {
+  text-shadow: 0 0 24px rgba(168, 85, 247, 0.35), 0 2px 18px rgba(0, 0, 0, 0.65);
+}
+
+/* Sublinhado neon animado */
+.neon-underline {
+  position: relative;
+}
+.neon-underline::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0.06em;
+  height: 0.14em;
+  width: 100%;
+  background: linear-gradient(90deg, rgba(192, 132, 252, 0.95), rgba(217, 70, 239, 0.9));
+  border-radius: 9999px;
+  box-shadow: 0 0 16px rgba(192, 132, 252, 0.7);
+  animation: neonPulse 2.4s ease-in-out infinite;
+}
+@keyframes neonPulse {
+  0%, 100% { opacity: 1; transform: scaleX(1); }
+  50% { opacity: 0.65; transform: scaleX(0.96); }
+}
+
+/* Partículas flutuantes */
+@keyframes sparkleFloat {
+  0% { transform: translateY(0) scale(1); opacity: 0.9; }
+  50% { transform: translateY(-14px) scale(1.15); opacity: 1; }
+  100% { transform: translateY(0) scale(1); opacity: 0.9; }
+}
+.animate-sparkle-float {
+  animation: sparkleFloat 3.2s ease-in-out infinite;
 }
 
 /* 8K Ultra-Sharp Canvas Enhancer */

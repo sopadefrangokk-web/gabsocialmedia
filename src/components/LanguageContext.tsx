@@ -164,7 +164,7 @@ const pt: Strings = {
   aboutP1:
     "Beleza sem estratégia é apenas vaidade cara. No mercado atual, uma boa estética chama a atenção por 3 segundos, mas é a clareza da sua oferta, o posicionamento magnético e os funis ativos no Direct que colocam dinheiro no seu caixa.",
   aboutP2:
-    "Não entregamos templates genéricos nem truques de algoritmo. Estruturamos o seu negócio com mentalidade de alta conversão, transformando a sua audiência em compradores de alto valor.",
+    "Não entrego templates genéricos nem truques de algoritmo. Estruturo o seu negócio com mentalidade de alta conversão, transformando a sua audiência em compradores de alto valor.",
   stats: ["Aumento em Conversão", "Faturamento Gerado", "Negócios no Topo", "Funis Automáticos"],
   contactBadge: "CONSULTORIA ESTRATÉGICA // AGENDA ABERTA",
   contactTitlePre: "Pronto para transformar seu perfil em uma",
@@ -216,7 +216,7 @@ const pt: Strings = {
       title: "Design UI/UX",
       subtitle: "Produtos Digitais & Experiências Humanas",
       description:
-        "Interfaces calibradas para delite sensorial, fluidez de micro-interações e zero fricção cognitiva. Uno estruturas ergonômicas com profundidade espacial cinematográfica para criar produtos que as pessoas amam.",
+        "Interfaces calibradas para deleite sensorial, fluidez de micro-interações e zero fricção cognitiva. Uno estruturas ergonômicas com profundidade espacial cinematográfica para criar produtos que as pessoas amam.",
       metrics: ["<80ms Latência de Interação", "99,4% Pontuação de Usabilidade", "Zero Fadiga Cognitiva"],
       deliverables: [
         "Design Systems Multiplataforma (Web, iOS, macOS, Espacial)",
@@ -263,7 +263,7 @@ const pt: Strings = {
   works: [
     { category: "Computação Espacial", desc: "Plataforma autônoma de inteligência espacial projetada para gestão de ativos institucionais." },
     { category: "Tecnologia Automotiva", desc: "Configurador 3D interativo em tempo real e experiência de telemetria para hipercarros elétricos." },
-    { category: "Liquidez Global", desc: "Identidade visual completa e terminal de transações para capital transfronteiriço de última geração." },
+    { category: "Liquidez Global", desc: "Identidade visual completa e terminal de transações para capital transfronteiras de última geração." },
     { category: "Robótica Quântica", desc: "Presença web cinematográfica e suíte de documentação técnica para fotônica quântica." },
   ],
   personTag: "Apresentação",
@@ -282,7 +282,7 @@ const pt: Strings = {
   faqItems: [
     {
       q: "Preciso ter muitos seguidores para começar?",
-      a: "Não. O número de seguidores não define o seu resultado — o que define é a clareza da sua oferta e o posicionamento do perfil. Começo do zero ou com um perfil pequeno com frequência: construo a base, a narrativa e o conteúdo para atrair o público certo, não qualquer público. Crescimento consistente vem de estratégia, não de quantidade.",
+      a: "Não. O número de seguidores não define o seu resultado — o que define é a clareza da sua oferta e o posicionamento do perfil. Começo do zero ou com um perfil pequeno, com consistência: construo a base, a narrativa e o conteúdo para atrair o público certo, não qualquer público. Crescimento consistente vem de estratégia, não de quantidade.",
     },
     {
       q: "Quanto tempo leva para ver resultado?",
@@ -357,7 +357,7 @@ const en: Strings = {
   aboutP1:
     "Beauty without strategy is just expensive vanity. In today's market, good aesthetics grab attention for 3 seconds, but the clarity of your offer, magnetic positioning and active DM funnels are what put money in your bank.",
   aboutP2:
-    "We don't deliver generic templates or algorithm hacks. We structure your business with a high-conversion mindset, turning your audience into high-value buyers.",
+    "I don't deliver generic templates or algorithm hacks. I structure your business with a high-conversion mindset, turning your audience into high-value buyers.",
   stats: ["Conversion Increase", "Revenue Generated", "Top Businesses", "Automated Funnels"],
   contactBadge: "STRATEGIC CONSULTING // SLOTS OPEN",
   contactTitlePre: "Ready to turn your profile into a",

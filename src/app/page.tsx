@@ -15,6 +15,7 @@ import { ScrollCanvas } from "@/components/ScrollCanvas";
 import { ServicesSection } from "@/components/ServicesSection";
 import { BentoHero } from "@/components/BentoHero";
 import { AboutPerson } from "@/components/AboutPerson";
+import { DiagnosisSection } from "@/components/DiagnosisSection";
 import { FaqSection } from "@/components/FaqSection";
 import { WebsitesSection } from "@/components/WebsitesSection";
 import { GabrielLogo } from "@/components/GabrielLogo";
@@ -350,60 +351,7 @@ function HomeContent() {
 
       <BentoHero onContact={() => goToContact()} />
 
-      <section id="about" className="relative z-20 w-full min-h-[90vh] flex items-center py-16 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-10 xl:px-14 max-w-[1550px] mx-auto">
-        {/* Painel em vidro fosco — ocupa a largura da tela para destaque */}
-        <div className="relative w-full rounded-[32px] lg:rounded-[40px] bg-[#0D0618]/55 backdrop-blur-2xl backdrop-saturate-150 border border-purple-500/30 p-8 sm:p-12 lg:p-16 xl:p-20 shadow-[0_0_80px_rgba(168,85,247,0.22),inset_0_1px_0_rgba(255,255,255,0.1)] overflow-hidden">
-          {/* reflexo superior do vidro */}
-          <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-purple-300/70 to-transparent" />
-          <div className="pointer-events-none absolute -top-40 -left-40 w-[480px] h-[480px] rounded-full bg-purple-600/25 blur-[120px]" />
-          <div className="pointer-events-none absolute -bottom-40 -right-40 w-[480px] h-[480px] rounded-full bg-fuchsia-600/20 blur-[120px]" />
-          <div className="pointer-events-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] rounded-full bg-indigo-600/10 blur-[140px]" />
-
-          <div className="relative w-full max-w-none">
-            <div className="flex items-center gap-3 mb-6">
-              <span className="text-[11px] sm:text-xs font-semibold uppercase tracking-[0.35em] text-purple-300 bg-purple-500/15 border border-purple-400/30 rounded-full px-4 py-1.5 backdrop-blur-md">
-                {t.aboutTag}
-              </span>
-              <div className="w-12 h-[1px] bg-purple-400/60" />
-            </div>
-
-            <h2 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight text-white leading-[1.05] mb-8 lg:mb-10 drop-shadow-[0_2px_12px_rgba(0,0,0,0.6)] max-w-5xl">
-              {t.aboutTitlePre}{" "}
-              <span className="font-serif-italic font-normal text-purple-200">
-                {t.aboutTitleHighlight}
-              </span>
-              ?
-            </h2>
-
-            <p className="text-zinc-100 text-base sm:text-xl lg:text-2xl leading-relaxed mb-6 drop-shadow-[0_1px_8px_rgba(0,0,0,0.7)] max-w-5xl">
-              {t.aboutP1}
-            </p>
-
-            <p className="text-zinc-300 text-sm sm:text-base lg:text-lg leading-relaxed mb-14 drop-shadow-[0_1px_8px_rgba(0,0,0,0.7)] max-w-4xl">
-              {t.aboutP2}
-            </p>
-
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 pt-8 border-t border-purple-400/25">
-              <div className="rounded-2xl bg-white/[0.04] border border-purple-400/20 backdrop-blur-md p-5 lg:p-6">
-                <div className="text-3xl lg:text-4xl font-bold text-purple-300 font-mono drop-shadow-[0_2px_10px_rgba(0,0,0,0.8)]">+340%</div>
-                <div className="text-xs sm:text-sm text-zinc-300 mt-2">{t.stats[0]}</div>
-              </div>
-              <div className="rounded-2xl bg-white/[0.04] border border-purple-400/20 backdrop-blur-md p-5 lg:p-6">
-                <div className="text-3xl lg:text-4xl font-bold text-purple-300 font-mono drop-shadow-[0_2px_10px_rgba(0,0,0,0.8)]">R$ 14M+</div>
-                <div className="text-xs sm:text-sm text-zinc-300 mt-2">{t.stats[1]}</div>
-              </div>
-              <div className="rounded-2xl bg-white/[0.04] border border-purple-400/20 backdrop-blur-md p-5 lg:p-6">
-                <div className="text-3xl lg:text-4xl font-bold text-purple-300 font-mono drop-shadow-[0_2px_10px_rgba(0,0,0,0.8)]">+120</div>
-                <div className="text-xs sm:text-sm text-zinc-300 mt-2">{t.stats[2]}</div>
-              </div>
-              <div className="rounded-2xl bg-white/[0.04] border border-purple-400/20 backdrop-blur-md p-5 lg:p-6">
-                <div className="text-3xl lg:text-4xl font-bold text-purple-300 font-mono drop-shadow-[0_2px_10px_rgba(0,0,0,0.8)]">24/7</div>
-                <div className="text-xs sm:text-sm text-zinc-300 mt-2">{t.stats[3]}</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <DiagnosisSection />
 
       <AboutPerson onContact={() => goToContact()} />
 
