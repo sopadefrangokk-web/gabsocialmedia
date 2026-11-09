@@ -16,6 +16,7 @@ import { ServicesSection } from "@/components/ServicesSection";
 import { BentoHero } from "@/components/BentoHero";
 import { AboutPerson } from "@/components/AboutPerson";
 import { DiagnosisSection } from "@/components/DiagnosisSection";
+import { MethodSection } from "@/components/MethodSection";
 import { FaqSection } from "@/components/FaqSection";
 import { WebsitesSection } from "@/components/WebsitesSection";
 import { GabrielLogo } from "@/components/GabrielLogo";
@@ -354,6 +355,9 @@ function HomeContent() {
       <DiagnosisSection />
 
       <AboutPerson onContact={() => goToContact()} />
+
+      {/* Método — carrossel infinito */}
+      <MethodSection onContact={() => goToContact()} />
 
       <div id="services">
         <ServicesSection />

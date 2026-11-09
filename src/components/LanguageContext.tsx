@@ -113,6 +113,18 @@ export interface Strings {
   sitesBadge1: string;
   sitesBadge2: string;
   sitesBadge3: string;
+  methodTag: string;
+  methodTitlePre: string;
+  methodTitleHighlight: string;
+  methodSubtitle: string;
+  methodSteps: {
+    num: string;
+    title: string;
+    desc: string;
+    subtitle: string;
+    items: { title: string; desc: string }[];
+    footer: string;
+  }[];
 }
 
 const pt: Strings = {
@@ -306,6 +318,76 @@ const pt: Strings = {
   sitesBadge1: "100% Responsivo",
   sitesBadge2: "Design Personalizado",
   sitesBadge3: "Foco em Conversão",
+  methodTag: "Nosso Método",
+  methodTitlePre: "Do início ao resultado:",
+  methodTitleHighlight: "nosso processo",
+  methodSubtitle: "Um método claro, estratégico e personalizado — do primeiro olhar no seu perfil até a evolução contínua.",
+  methodSteps: [
+    {
+      num: "01",
+      title: "Objetivos",
+      desc: "Todo projeto precisa de uma direção. Definimos objetivos de acordo com a realidade de cada marca, conectando conteúdo, posicionamento e estratégia para construir uma presença digital mais consistente.",
+      subtitle: "O que buscamos alcançar",
+      items: [
+        { title: "Mais engajamento", desc: "Aproximar a marca do público e estimular conexões." },
+        { title: "Uma marca mais forte", desc: "Construir reconhecimento, identidade e confiança." },
+        { title: "Crescimento consistente", desc: "Ampliar a presença digital e gerar novas oportunidades." },
+      ],
+      footer: "Planejamento • Estratégia • Resultados",
+    },
+    {
+      num: "02",
+      title: "Análise",
+      desc: "Antes de definir qualquer estratégia, precisamos entender o cenário atual da sua marca. Analisamos o perfil, o público e os conteúdos para identificar pontos de melhoria e oportunidades.",
+      subtitle: "O que analisamos",
+      items: [
+        { title: "Perfil", desc: "Avaliamos como sua marca se apresenta, seu posicionamento, sua identidade e os pontos que a diferenciam." },
+        { title: "Público", desc: "Entendemos quem acompanha sua marca, seus interesses e que tipo de conteúdo desperta sua atenção." },
+        { title: "Conteúdo", desc: "Observamos o desempenho das publicações para identificar o que gera interesse e o que precisa ser ajustado." },
+        { title: "Oportunidades", desc: "Identificamos caminhos para melhorar sua presença digital e tornar a comunicação mais eficiente." },
+      ],
+      footer: "Estratégia • Dados • Crescimento • Resultados",
+    },
+    {
+      num: "03",
+      title: "Calendário de Postagens",
+      desc: "Cada publicação precisa ter um propósito. Organizamos os conteúdos em um calendário estratégico, considerando a rotina da marca, os interesses do público e os objetivos de comunicação.",
+      subtitle: "Como organizamos",
+      items: [
+        { title: "Planejamento", desc: "Definimos os melhores momentos e formatos para publicar, considerando a proposta de cada conteúdo." },
+        { title: "Organização", desc: "Estruturamos as publicações com antecedência, com visão clara do que será produzido e divulgado." },
+        { title: "Consistência", desc: "Mantemos uma frequência alinhada à realidade da marca, fortalecendo sua presença no digital." },
+        { title: "Desempenho", desc: "Acompanhamos a resposta do público para entender o que funciona e orientar os próximos conteúdos." },
+      ],
+      footer: "Organização • Constância • Estratégia • Evolução",
+    },
+    {
+      num: "04",
+      title: "Clientes",
+      desc: "Cada marca tem sua própria história, necessidades e objetivos. Cada projeto é desenvolvido com atenção à identidade do negócio, unindo estratégia, criatividade e comunicação com propósito.",
+      subtitle: "O que guia cada projeto",
+      items: [
+        { title: "Personalização", desc: "Cada cliente recebe um planejamento próprio, a partir de seus objetivos, segmento e posicionamento." },
+        { title: "Criatividade", desc: "Conteúdos que valorizam a identidade da marca, despertam interesse e comunicam com propósito." },
+        { title: "Parceria", desc: "Relação próxima, com diálogo aberto, alinhamento constante e acompanhamento em cada etapa." },
+        { title: "Evolução", desc: "Fortalecemos a presença digital da marca, ampliamos sua visibilidade e criamos oportunidades." },
+      ],
+      footer: "Identidade • Criatividade • Parceria • Evolução",
+    },
+    {
+      num: "05",
+      title: "Antes",
+      desc: "Todo projeto começa com uma boa análise. Antes de propor mudanças, entendemos como sua marca se apresenta, como se comunica e onde estão as oportunidades de evolução.",
+      subtitle: "O que observamos",
+      items: [
+        { title: "Perfil", desc: "Analisamos a apresentação do perfil, a identidade visual e o posicionamento da marca." },
+        { title: "Público", desc: "Identificamos o público que a marca deseja alcançar, seus interesses e comportamento." },
+        { title: "Conteúdo", desc: "Avaliamos as publicações atuais, identificando pontos fortes e aspectos a aprimorar." },
+        { title: "Desempenho", desc: "Observamos os resultados para reconhecer oportunidades e saber onde evoluir." },
+      ],
+      footer: "Identidade visual • Conteúdo • Público-alvo • Posicionamento • Estratégia • Desempenho",
+    },
+  ],
 };
 
 const en: Strings = {
@@ -499,6 +581,76 @@ const en: Strings = {
   sitesBadge1: "100% Responsive",
   sitesBadge2: "Custom Design",
   sitesBadge3: "Focused on Conversion",
+  methodTag: "Our Method",
+  methodTitlePre: "From start to results:",
+  methodTitleHighlight: "our process",
+  methodSubtitle: "A clear, strategic and personalized method — from the first look at your profile to continuous evolution.",
+  methodSteps: [
+    {
+      num: "01",
+      title: "Goals",
+      desc: "Every project needs direction. We define goals according to each brand's reality, connecting content, positioning and strategy to build a more consistent digital presence.",
+      subtitle: "What we aim to achieve",
+      items: [
+        { title: "More engagement", desc: "Bring the brand closer to the audience and spark connections." },
+        { title: "A stronger brand", desc: "Build recognition, identity and trust." },
+        { title: "Consistent growth", desc: "Expand your digital presence and create new opportunities." },
+      ],
+      footer: "Planning • Strategy • Results",
+    },
+    {
+      num: "02",
+      title: "Analysis",
+      desc: "Before defining any strategy, we need to understand your brand's current scenario. We analyze your profile, audience and content to spot improvement points and opportunities.",
+      subtitle: "What we analyze",
+      items: [
+        { title: "Profile", desc: "We assess how your brand presents itself, its positioning and identity." },
+        { title: "Audience", desc: "We understand who follows your brand and what content grabs their attention." },
+        { title: "Content", desc: "We look at post performance to identify what sparks interest and what needs adjustment." },
+        { title: "Opportunities", desc: "We identify ways to improve your presence and make communication more efficient." },
+      ],
+      footer: "Strategy • Data • Growth • Results",
+    },
+    {
+      num: "03",
+      title: "Posting Calendar",
+      desc: "Every post needs a purpose. We organize content in a strategic calendar, considering your brand routine, audience interests and communication goals.",
+      subtitle: "How we organize",
+      items: [
+        { title: "Planning", desc: "We define the best moments and formats to publish, considering each content's purpose." },
+        { title: "Organization", desc: "We structure posts in advance with a clear view of what will be produced." },
+        { title: "Consistency", desc: "We keep a posting frequency aligned with your brand's reality." },
+        { title: "Performance", desc: "We track audience response to understand what works and guide the next steps." },
+      ],
+      footer: "Organization • Consistency • Strategy • Growth",
+    },
+    {
+      num: "04",
+      title: "Clients",
+      desc: "Every brand has its own story, needs and goals. Each project is developed with attention to your business identity, combining strategy, creativity and purposeful communication.",
+      subtitle: "What guides each project",
+      items: [
+        { title: "Personalization", desc: "A tailored plan built from your goals, segment and positioning." },
+        { title: "Creativity", desc: "Content that values your brand identity and sparks interest." },
+        { title: "Partnership", desc: "Close relationship, open dialogue and follow-up at every step." },
+        { title: "Evolution", desc: "We strengthen your presence, expand visibility and create opportunities." },
+      ],
+      footer: "Identity • Creativity • Partnership • Evolution",
+    },
+    {
+      num: "05",
+      title: "Before",
+      desc: "Every project starts with a good analysis. Before proposing changes, we understand how your brand presents itself, communicates and where the opportunities are.",
+      subtitle: "What we observe",
+      items: [
+        { title: "Profile", desc: "We analyze profile presentation, visual identity and brand positioning." },
+        { title: "Audience", desc: "We identify the audience your brand wants to reach and its behavior." },
+        { title: "Content", desc: "We assess current posts, spotting strengths and improvement points." },
+        { title: "Performance", desc: "We observe results to recognize opportunities and know where to evolve." },
+      ],
+      footer: "Visual identity • Content • Target audience • Positioning • Strategy • Performance",
+    },
+  ],
 };
 
 export const translations: Record<Lang, Strings> = { pt, en };
