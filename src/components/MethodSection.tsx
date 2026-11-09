@@ -46,7 +46,7 @@ export function MethodSection({ onContact }: { onContact?: () => void }) {
               </span>
             </h2>
           </div>
-          <p className="text-zinc-300 text-base sm:text-lg leading-relaxed max-w-md">{t.methodSubtitle}</p>
+          <p className="rounded-2xl border border-purple-400/30 bg-purple-500/10 backdrop-blur-md px-6 py-5 text-zinc-100 text-base sm:text-xl font-medium leading-[1.65] max-w-lg shadow-[0_0_25px_rgba(168,85,247,0.18)] drop-shadow-[0_2px_10px_rgba(0,0,0,0.7)]">{t.methodSubtitle}</p>
         </div>
 
         {/* trilho infinito */}

@@ -12,7 +12,6 @@ import {
   X,
 } from "lucide-react";
 import { ScrollCanvas } from "@/components/ScrollCanvas";
-import { ServicesSection } from "@/components/ServicesSection";
 import { BentoHero } from "@/components/BentoHero";
 import { AboutPerson } from "@/components/AboutPerson";
 import { DiagnosisSection } from "@/components/DiagnosisSection";
@@ -359,98 +358,36 @@ function HomeContent() {
       {/* Método — carrossel infinito */}
       <MethodSection onContact={() => goToContact()} />
 
-      <div id="services">
-        <ServicesSection />
-      </div>
+      
 
-      <section id="work" className="relative z-20 w-full py-32 px-6 lg:px-14 xl:px-20 max-w-[1550px] mx-auto border-t border-purple-900/20">
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
-          <div>
-            <div className="flex items-center gap-3 mb-3">
-              <span className="text-[10px] font-semibold uppercase tracking-[0.32em] text-purple-400">
-                {t.worksTag}
-              </span>
-              <div className="w-8 h-[1px] bg-purple-500/40" />
-            </div>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight">
-              {t.worksTitlePre}{" "}
-              <span className="font-serif-italic font-normal text-purple-200">
-                {t.worksTitleHighlight}
-              </span>
-              .
-            </h2>
-          </div>
-          <span className="text-xs font-mono text-purple-400 tracking-widest uppercase">
-            {t.worksCurated}
-          </span>
-        </div>
+      <section id="results" className="relative z-20 w-full py-24 px-4 sm:px-6 lg:px-10 xl:px-14 max-w-[1550px] mx-auto">
+        {/* Painel glass com métricas — fonte maior + efeitos */}
+        <div className="relative overflow-hidden rounded-[32px] border border-purple-400/30 bg-[#0D0618]/55 backdrop-blur-2xl backdrop-saturate-150 p-8 sm:p-10 lg:p-12 shadow-[0_0_60px_rgba(168,85,247,0.2),inset_0_1px_0_rgba(255,255,255,0.08)]">
+          <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-purple-300/70 to-transparent" />
+          <div className="pointer-events-none absolute -top-24 -left-24 w-72 h-72 rounded-full bg-purple-600/25 blur-[100px]" />
+          <div className="pointer-events-none absolute -bottom-24 -right-24 w-72 h-72 rounded-full bg-fuchsia-600/20 blur-[100px]" />
+          <span className="pointer-events-none absolute top-6 right-8 text-purple-300/40 animate-sparkle-float select-none">✦</span>
+          <span className="pointer-events-none absolute bottom-8 left-8 text-fuchsia-300/30 animate-sparkle-float select-none" style={{ animationDelay: "1s" }}>✦</span>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {[
-            {
-              title: "Hyperia OS",
-              year: "2026",
-            },
-            {
-              title: "Kinesis Motors",
-              year: "2025",
-            },
-            {
-              title: "Solstice Pay",
-              year: "2026",
-            },
-            {
-              title: "Aether Labs",
-              year: "2025",
-            },
-          ].map((item, i) => (
-            <div
-              key={i}
-              className="group p-8 rounded-3xl bg-[#0f081c]/70 border border-purple-500/20 hover:border-purple-400/50 backdrop-blur-xl transition-all duration-500 hover:shadow-[0_0_35px_rgba(168,85,247,0.2)] flex flex-col justify-between"
-            >
-              <div>
-                <div className="flex justify-between items-center text-xs font-mono text-purple-300 mb-4">
-                  <span>{t.works[i].category}</span>
-                  <span>{item.year}</span>
+          <div className="relative grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 text-center">
+            {[
+              { value: "10K+", label: t.followersLabel },
+              { value: "50K+", label: t.viewsLabel },
+              { value: "+90%", label: t.stats[0] },
+              { value: "10K+", label: t.stats[1] },
+            ].map((m) => (
+              <div
+                key={m.label}
+                className="group relative rounded-3xl border border-purple-400/25 bg-white/[0.05] backdrop-blur-md px-4 py-7 sm:py-8 transition-all duration-500 hover:-translate-y-1.5 hover:border-purple-300/60 hover:bg-purple-500/10 hover:shadow-[0_16px_40px_rgba(124,58,237,0.3)]"
+              >
+                <div className="pointer-events-none absolute -top-6 -right-6 w-20 h-20 rounded-full bg-purple-500/25 blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <div className="font-display text-4xl sm:text-5xl font-bold text-purple-200 font-mono drop-shadow-[0_2px_12px_rgba(0,0,0,0.85)] group-hover:text-purple-100 group-hover:scale-105 transition-all duration-500">
+                  {m.value}
                 </div>
-                <h3 className="text-2xl font-bold text-white group-hover:text-purple-200 transition-colors mb-2">
-                  {item.title}
-                </h3>
-                <p className="text-sm text-zinc-400 leading-relaxed">
-                  {t.works[i].desc}
-                </p>
+                <div className="mt-2 text-sm sm:text-base font-medium text-zinc-200 leading-snug">{m.label}</div>
+                <span className="absolute bottom-0 left-0 h-[2px] w-full bg-gradient-to-r from-purple-400 to-fuchsia-400 scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500" />
               </div>
-
-              <div className="pt-8 flex items-center justify-between border-t border-white/[0.06] mt-6">
-                <span className="text-xs font-medium tracking-wider uppercase text-zinc-300 group-hover:text-white transition-colors">
-                  {t.worksExplore}
-                </span>
-                <div className="w-8 h-8 rounded-full border border-purple-500/40 flex items-center justify-center group-hover:bg-purple-600 group-hover:text-white transition-all shadow-md">
-                  <ArrowRight className="w-3.5 h-3.5" />
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      <section id="results" className="relative z-20 w-full py-24 px-6 lg:px-14 xl:px-20 max-w-[1550px] mx-auto border-t border-purple-900/20">
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 max-w-4xl mx-auto text-center">
-          <div>
-            <div className="text-3xl font-bold text-purple-400 font-mono">10K+</div>
-            <div className="text-xs text-zinc-400 mt-1">{t.followersLabel}</div>
-          </div>
-          <div>
-            <div className="text-3xl font-bold text-purple-400 font-mono">50K+</div>
-            <div className="text-xs text-zinc-400 mt-1">{t.viewsLabel}</div>
-          </div>
-          <div>
-            <div className="text-3xl font-bold text-purple-400 font-mono">+340%</div>
-            <div className="text-xs text-zinc-400 mt-1">{t.stats[0]}</div>
-          </div>
-          <div>
-            <div className="text-3xl font-bold text-purple-400 font-mono">R$ 14M+</div>
-            <div className="text-xs text-zinc-400 mt-1">{t.stats[1]}</div>
+            ))}
           </div>
         </div>
       </section>

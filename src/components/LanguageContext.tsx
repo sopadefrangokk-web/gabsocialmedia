@@ -174,7 +174,7 @@ const pt: Strings = {
   aboutTitlePre: "Por que 97% dos perfis bonitos continuam",
   aboutTitleHighlight: "sem vender nada",
   aboutP1:
-    "Beleza sem estratégia é apenas vaidade cara. No mercado atual, uma boa estética chama a atenção por 3 segundos, mas é a clareza da sua oferta, o posicionamento magnético e os funis ativos no Direct que colocam dinheiro no seu caixa.",
+    "Beleza sem estratégia é apenas vaidade. No mercado atual, uma boa estética chama a atenção por 3 segundos, mas é a clareza da sua oferta, o posicionamento magnético e os funis ativos no Direct que colocam dinheiro no seu caixa.",
   aboutP2:
     "Não entrego templates genéricos nem truques de algoritmo. Estruturo o seu negócio com mentalidade de alta conversão, transformando a sua audiência em compradores de alto valor.",
   stats: ["Aumento em Conversão", "Faturamento Gerado", "Negócios no Topo", "Funis Automáticos"],
@@ -183,7 +183,7 @@ const pt: Strings = {
   contactTitleHighlight: "máquina de vendas",
   contactText:
     "Vagas limitadas para acompanhamento estratégico individual. Agende sua sessão diagnóstica confidencial para mapearmos seus maiores gargalos de conversão.",
-  contactCta: "Agendar Meu Diagnóstico Gratuito",
+  contactCta: "Fale comigo e vamos agendar um projeto!",
   footerRights: "Todos os direitos reservados.",
   reelTitle: "GB Gabriel Marketing Digital Reel 2026",
   reelText: "Narrativas cinematográficas de marca, interações espaciais e artesanato digital ultra-nítido em 8K.",
@@ -437,7 +437,7 @@ const en: Strings = {
   aboutTitlePre: "Why do 97% of beautiful profiles keep",
   aboutTitleHighlight: "making no sales",
   aboutP1:
-    "Beauty without strategy is just expensive vanity. In today's market, good aesthetics grab attention for 3 seconds, but the clarity of your offer, magnetic positioning and active DM funnels are what put money in your bank.",
+    "Beauty without strategy is just vanity. In today's market, good aesthetics grab attention for 3 seconds, but the clarity of your offer, magnetic positioning and active DM funnels are what put money in your bank.",
   aboutP2:
     "I don't deliver generic templates or algorithm hacks. I structure your business with a high-conversion mindset, turning your audience into high-value buyers.",
   stats: ["Conversion Increase", "Revenue Generated", "Top Businesses", "Automated Funnels"],
@@ -446,7 +446,7 @@ const en: Strings = {
   contactTitleHighlight: "sales machine",
   contactText:
     "Limited spots for individual strategic support. Book your confidential diagnostic session so we can map your biggest conversion bottlenecks.",
-  contactCta: "Book My Free Diagnosis",
+  contactCta: "Talk to me and let's schedule a project!",
   footerRights: "All rights reserved.",
   reelTitle: "GB Gabriel Marketing Digital Reel 2026",
   reelText: "Cinematic brand narratives, spatial interactions and 8K ultra-sharp digital craftsmanship.",
