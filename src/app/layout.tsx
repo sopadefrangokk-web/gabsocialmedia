@@ -14,7 +14,7 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "Gabriel Social Media",
+  title: "GB Gabriel Marketing Digital",
   description: "Estratégia criativa, conteúdo que conecta e resultados reais para o seu negócio.",
 };
 

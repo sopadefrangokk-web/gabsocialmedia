@@ -317,7 +317,7 @@ export function BentoHero({ onContact }: { onContact?: () => void }) {
           <p className="text-[11px] tracking-[0.3em] uppercase text-zinc-500">
             {t.bentoFooterTagline}
           </p>
-          <span className="text-xs text-zinc-500">© 2026 Gabriel Social Media</span>
+          <span className="text-xs text-zinc-500">© 2026 GB Gabriel Marketing Digital</span>
         </div>
       </div>
     </section>

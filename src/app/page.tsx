@@ -539,7 +539,7 @@ function HomeContent() {
           <GabrielLogo variant="compact" />
         </div>
         <div>
-          © 2026 Gabriel Social Media. {t.footerRights}
+          © 2026 GB Gabriel Marketing Digital. {t.footerRights}
         </div>
       </footer>
 
