@@ -255,25 +255,6 @@ function HomeContent() {
                   <ArrowUpRight className="w-4 h-4 text-purple-100 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                 </button>
               </div>
-
-              <div className="flex items-center gap-3.5 pt-2">
-                <div className="flex -space-x-2.5 overflow-hidden">
-                  <div className="inline-block h-8 w-8 rounded-full ring-2 ring-[#05020a] bg-gradient-to-tr from-purple-800 to-fuchsia-600 flex items-center justify-center text-xs font-semibold text-white shadow-inner">
-                    <span>AN</span>
-                  </div>
-                  <div className="inline-block h-8 w-8 rounded-full ring-2 ring-[#05020a] bg-gradient-to-tr from-indigo-700 to-purple-500 flex items-center justify-center text-xs font-semibold text-white shadow-inner">
-                    <span>LK</span>
-                  </div>
-                  <div className="inline-block h-8 w-8 rounded-full ring-2 ring-[#05020a] bg-gradient-to-tr from-violet-900 to-indigo-500 flex items-center justify-center text-xs font-semibold text-white shadow-inner">
-                    <span>MR</span>
-                  </div>
-                </div>
-
-                <div className="flex flex-col text-xs">
-                  <span className="text-zinc-400">{t.validatedBy}</span>
-                  <span className="font-semibold text-purple-300">{t.profitableProfiles}</span>
-                </div>
-              </div>
             </div>
 
             <div className="lg:col-span-6 xl:col-span-6 relative flex items-center justify-end min-h-[300px] pointer-events-none">
