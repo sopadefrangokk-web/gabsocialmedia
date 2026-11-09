@@ -365,46 +365,54 @@ function HomeContent() {
       <BentoHero onContact={() => setIsContactModalOpen(true)} />
 
       <section id="about" className="relative z-20 w-full py-32 px-6 lg:px-14 xl:px-20 max-w-[1550px] mx-auto">
-        <div className="max-w-3xl">
-          <div className="flex items-center gap-3 mb-4">
-            <span className="text-[10px] font-semibold uppercase tracking-[0.32em] text-purple-400">
-              {t.aboutTag}
-            </span>
-            <div className="w-8 h-[1px] bg-purple-500/40" />
-          </div>
+        {/* Painel em vidro fosco para destaque e legibilidade */}
+        <div className="relative max-w-4xl rounded-[32px] bg-[#0D0618]/60 backdrop-blur-2xl backdrop-saturate-150 border border-purple-500/25 p-7 sm:p-10 lg:p-12 shadow-[0_0_60px_rgba(168,85,247,0.18),inset_0_1px_0_rgba(255,255,255,0.08)] overflow-hidden">
+          {/* reflexo superior do vidro */}
+          <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-purple-300/60 to-transparent" />
+          <div className="pointer-events-none absolute -top-32 -left-32 w-80 h-80 rounded-full bg-purple-600/20 blur-[100px]" />
+          <div className="pointer-events-none absolute -bottom-32 -right-32 w-80 h-80 rounded-full bg-fuchsia-600/15 blur-[100px]" />
 
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white leading-tight mb-8">
-            {t.aboutTitlePre}{" "}
-            <span className="font-serif-italic font-normal text-purple-200">
-              {t.aboutTitleHighlight}
-            </span>
-            ?
-          </h2>
-
-          <p className="text-zinc-300 text-base sm:text-lg leading-relaxed mb-6">
-            {t.aboutP1}
-          </p>
-
-          <p className="text-zinc-400 text-sm sm:text-base leading-relaxed mb-12">
-            {t.aboutP2}
-          </p>
-
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 pt-6 border-t border-purple-900/30">
-            <div>
-              <div className="text-2xl lg:text-3xl font-bold text-purple-400 font-mono">+340%</div>
-              <div className="text-xs text-zinc-400 mt-1">{t.stats[0]}</div>
+          <div className="relative max-w-3xl">
+            <div className="flex items-center gap-3 mb-4">
+              <span className="text-[10px] font-semibold uppercase tracking-[0.32em] text-purple-300">
+                {t.aboutTag}
+              </span>
+              <div className="w-8 h-[1px] bg-purple-400/50" />
             </div>
-            <div>
-              <div className="text-2xl lg:text-3xl font-bold text-purple-400 font-mono">R$ 14M+</div>
-              <div className="text-xs text-zinc-400 mt-1">{t.stats[1]}</div>
-            </div>
-            <div>
-              <div className="text-2xl lg:text-3xl font-bold text-purple-400 font-mono">+120</div>
-              <div className="text-xs text-zinc-400 mt-1">{t.stats[2]}</div>
-            </div>
-            <div>
-              <div className="text-2xl lg:text-3xl font-bold text-purple-400 font-mono">24/7</div>
-              <div className="text-xs text-zinc-400 mt-1">{t.stats[3]}</div>
+
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white leading-tight mb-8 drop-shadow-[0_2px_12px_rgba(0,0,0,0.6)]">
+              {t.aboutTitlePre}{" "}
+              <span className="font-serif-italic font-normal text-purple-200">
+                {t.aboutTitleHighlight}
+              </span>
+              ?
+            </h2>
+
+            <p className="text-zinc-100 text-base sm:text-lg leading-relaxed mb-6 drop-shadow-[0_1px_8px_rgba(0,0,0,0.7)]">
+              {t.aboutP1}
+            </p>
+
+            <p className="text-zinc-300 text-sm sm:text-base leading-relaxed mb-12 drop-shadow-[0_1px_8px_rgba(0,0,0,0.7)]">
+              {t.aboutP2}
+            </p>
+
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 pt-6 border-t border-purple-400/25">
+              <div>
+                <div className="text-2xl lg:text-3xl font-bold text-purple-300 font-mono drop-shadow-[0_2px_10px_rgba(0,0,0,0.8)]">+340%</div>
+                <div className="text-xs text-zinc-300 mt-1">{t.stats[0]}</div>
+              </div>
+              <div>
+                <div className="text-2xl lg:text-3xl font-bold text-purple-300 font-mono drop-shadow-[0_2px_10px_rgba(0,0,0,0.8)]">R$ 14M+</div>
+                <div className="text-xs text-zinc-300 mt-1">{t.stats[1]}</div>
+              </div>
+              <div>
+                <div className="text-2xl lg:text-3xl font-bold text-purple-300 font-mono drop-shadow-[0_2px_10px_rgba(0,0,0,0.8)]">+120</div>
+                <div className="text-xs text-zinc-300 mt-1">{t.stats[2]}</div>
+              </div>
+              <div>
+                <div className="text-2xl lg:text-3xl font-bold text-purple-300 font-mono drop-shadow-[0_2px_10px_rgba(0,0,0,0.8)]">24/7</div>
+                <div className="text-xs text-zinc-300 mt-1">{t.stats[3]}</div>
+              </div>
             </div>
           </div>
         </div>
