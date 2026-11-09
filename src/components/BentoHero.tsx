@@ -202,7 +202,7 @@ export function BentoHero({ onContact }: { onContact?: () => void }) {
                 <span className="bg-gradient-to-r from-violet-400 to-fuchsia-400 bg-clip-text text-transparent">{t.transformTitleHighlight}</span>
               </h2>
               <p className="text-sm text-zinc-400 leading-relaxed mb-6">
-                {t.transformTextPre} <span className="text-violet-400 font-semibold">20k+</span> {t.transformTextPost}
+                {t.transformTextPre} <span className="text-violet-400 font-semibold">10k+</span> {t.transformTextPost}
               </p>
 
               {subscribed ? (
@@ -240,7 +240,7 @@ export function BentoHero({ onContact }: { onContact?: () => void }) {
                 <span className="w-9 h-9 rounded-full bg-violet-500/20 border border-violet-400/30 flex items-center justify-center mb-4">
                   <TrendingUp className="w-4 h-4 text-violet-300 rotate-[-18deg]" />
                 </span>
-                <span className="text-3xl lg:text-[34px] font-extrabold tracking-tight text-white">20K+</span>
+                <span className="text-3xl lg:text-[34px] font-extrabold tracking-tight text-white">10K+</span>
                 <span className="text-xs text-zinc-400 mt-1">{t.followersLabel}</span>
                 {/* linha */}
                 <svg className="mt-auto pt-4 w-full" viewBox="0 0 160 40" fill="none">
@@ -293,7 +293,7 @@ export function BentoHero({ onContact }: { onContact?: () => void }) {
                   <span className="w-9 h-9 rounded-full bg-violet-500 flex items-center justify-center mb-4 shadow-[0_0_20px_rgba(168,85,247,0.5)]">
                     <Play className="w-4 h-4 text-white fill-white ml-0.5" />
                   </span>
-                  <div className="text-3xl lg:text-[34px] font-extrabold tracking-tight text-white">200K+</div>
+                  <div className="text-3xl lg:text-[34px] font-extrabold tracking-tight text-white">50K+</div>
                   <div className="text-xs text-zinc-400 mt-1">{t.viewsLabel}</div>
                 </div>
                 {/* barras */}

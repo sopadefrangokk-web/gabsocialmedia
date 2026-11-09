@@ -499,11 +499,11 @@ function HomeContent() {
       <section id="results" className="relative z-20 w-full py-24 px-6 lg:px-14 xl:px-20 max-w-[1550px] mx-auto border-t border-purple-900/20">
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 max-w-4xl mx-auto text-center">
           <div>
-            <div className="text-3xl font-bold text-purple-400 font-mono">20K+</div>
+            <div className="text-3xl font-bold text-purple-400 font-mono">10K+</div>
             <div className="text-xs text-zinc-400 mt-1">{t.followersLabel}</div>
           </div>
           <div>
-            <div className="text-3xl font-bold text-purple-400 font-mono">200K+</div>
+            <div className="text-3xl font-bold text-purple-400 font-mono">50K+</div>
             <div className="text-xs text-zinc-400 mt-1">{t.viewsLabel}</div>
           </div>
           <div>
