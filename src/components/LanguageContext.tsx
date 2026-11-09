@@ -68,6 +68,28 @@ export interface Strings {
   modalSuccessText: string;
   modalServices: string[];
   modalRevenues: string[];
+  expertiseTag: string;
+  expertiseTitlePre: string;
+  expertiseTitleHighlight: string;
+  expertiseDesc: string;
+  practiceLabel: string;
+  benchmarkVerified: string;
+  deliverablesLabel: string;
+  techStackLabel: string;
+  requestPrefix: string;
+  expertise: {
+    title: string;
+    subtitle: string;
+    description: string;
+    metrics: string[];
+    deliverables: string[];
+  }[];
+  worksTag: string;
+  worksTitlePre: string;
+  worksTitleHighlight: string;
+  worksCurated: string;
+  worksExplore: string;
+  works: { category: string; desc: string }[];
 }
 
 const pt: Strings = {
@@ -143,6 +165,84 @@ const pt: Strings = {
   modalSuccessText: "Nossa equipe já está analisando o seu perfil. Entraremos em contato via WhatsApp nas próximas horas.",
   modalServices: ["Estratégia de Conteúdo", "Posicionamento Visual", "Funil de Vendas no Direct", "Tráfego & Escala"],
   modalRevenues: ["Iniciando (< R$ 10k)", "R$ 10k - R$ 30k/mês", "R$ 30k - R$ 80k/mês", "+ R$ 100k/mês"],
+  expertiseTag: "Práticas Principais",
+  expertiseTitlePre: "Especializado em",
+  expertiseTitleHighlight: "artesanato extremo",
+  expertiseDesc: "Cada projeto é construído do zero, sem templates genéricos, unindo maestria artística e engenharia de alto padrão.",
+  practiceLabel: "PRÁTICA",
+  benchmarkVerified: "Benchmark Verificado",
+  deliverablesLabel: "Entregáveis Tangíveis",
+  techStackLabel: "TECNOLOGIAS:",
+  requestPrefix: "Solicitar especificação de",
+  expertise: [
+    {
+      title: "Estratégia de Marca",
+      subtitle: "Posicionamento, Narrativa & Sistemas de Identidade",
+      description:
+        "Construo bases de marca de alto impacto para organizações que definem categorias. Com pesquisa qualitativa rigorosa e semiótica visual, construo identidades distintas que entregam respeito institucional.",
+      metrics: ["+340% Reconhecimento de Marca", "Liderança de Categoria", "Marcas Registradas Globais"],
+      deliverables: [
+        "Arquétipo de Marca & Manifesto de Posicionamento",
+        "Identidade Visual Completa & Diretrizes Cinéticas",
+        "Arquitetura de Tipografia & Tokens de Design",
+        "Identidade Verbal & Tom de Voz Editorial",
+        "Narrativa de Lançamento para Mercado e Investidores",
+      ],
+    },
+    {
+      title: "Design UI/UX",
+      subtitle: "Produtos Digitais & Experiências Humanas",
+      description:
+        "Interfaces calibradas para delite sensorial, fluidez de micro-interações e zero fricção cognitiva. Uno estruturas ergonômicas com profundidade espacial cinematográfica para criar produtos que as pessoas amam.",
+      metrics: ["<80ms Latência de Interação", "99,4% Pontuação de Usabilidade", "Zero Fadiga Cognitiva"],
+      deliverables: [
+        "Design Systems Multiplataforma (Web, iOS, macOS, Espacial)",
+        "Micro-interações de Alta Fidelidade & Protótipos",
+        "Arquitetura da Informação & Jornada do Usuário",
+        "Engenharia de Tema Escuro/Claro",
+        "Design Tokens Acessíveis (WCAG 2.1 AAA)",
+      ],
+    },
+    {
+      title: "Desenvolvimento Web",
+      subtitle: "Engenharia Web Moderna de Alto Desempenho",
+      description:
+        "Bases de código limpas, manuteníveis e ultra-rápidas em stacks modernas. De Canvas em tempo real a renderização serverless em sub-segundo, trato o desempenho do frontend como material de design primário.",
+      metrics: ["100/100 Desempenho Lighthouse", "TTFB Sub-segundo", "Cache Global de Borda"],
+      deliverables: [
+        "Apps Next.js 16 Full-Stack & Server Components",
+        "Canvas HTML5 & Shaders WebGL Acelerados por Hardware",
+        "Scroll Suave & Transições com Física LERP",
+        "Micro-interações Fluidas Aceleradas",
+        "Integração de APIs Enterprise & Segurança em Runtime",
+      ],
+    },
+    {
+      title: "Marketing Digital",
+      subtitle: "Engenharia de Crescimento & Campanhas de Precisão",
+      description:
+        "Estruturas de distribuição orientadas a dados que amplificam o domínio de mercado. Conecto superfícies digitais de alta conversão com funis de aquisição algorítmica para transformar tráfego em equity duradoura.",
+      metrics: ["4,8x Retorno Médio em Anúncios", "78% Menor CAC", "Velocidade de Funil Escalável"],
+      deliverables: [
+        "Funis de Landing Page de Alta Conversão & Copy Dinâmica",
+        "Analytics Comportamental & Atribuição Multi-Toque",
+        "CRM Automatizado & Jornadas de E-mail Enterprise",
+        "Visibilidade Orgânica & Autoridade de Busca",
+        "Dashboards de Telemetria em Tempo Real",
+      ],
+    },
+  ],
+  worksTag: "Portfólio",
+  worksTitlePre: "Comissões",
+  worksTitleHighlight: "selecionadas",
+  worksCurated: "Portfólio Curado // 2025–2026",
+  worksExplore: "Explorar Estudo de Caso",
+  works: [
+    { category: "Computação Espacial", desc: "Plataforma autônoma de inteligência espacial projetada para gestão de ativos institucionais." },
+    { category: "Tecnologia Automotiva", desc: "Configurador 3D interativo em tempo real e experiência de telemetria para hipercarros elétricos." },
+    { category: "Liquidez Global", desc: "Identidade visual completa e terminal de transações para capital transfronteiriço de última geração." },
+    { category: "Robótica Quântica", desc: "Presença web cinematográfica e suíte de documentação técnica para fotônica quântica." },
+  ],
 };
 
 const en: Strings = {
@@ -218,6 +318,84 @@ const en: Strings = {
   modalSuccessText: "Our team is already analyzing your profile. We will contact you via WhatsApp within the next few hours.",
   modalServices: ["Content Strategy", "Visual Positioning", "DM Sales Funnel", "Traffic & Scale"],
   modalRevenues: ["Starting out (< $2k)", "$2k - $6k/month", "$6k - $16k/month", "+ $20k/month"],
+  expertiseTag: "Core Practices",
+  expertiseTitlePre: "Specialized in",
+  expertiseTitleHighlight: "extreme craft",
+  expertiseDesc: "Every project is built from first principles without generic templates, combining artistic mastery with enterprise-grade engineering.",
+  practiceLabel: "PRACTICE",
+  benchmarkVerified: "Benchmark Verified",
+  deliverablesLabel: "Tangible Deliverables",
+  techStackLabel: "TECH STACK:",
+  requestPrefix: "Request",
+  expertise: [
+    {
+      title: "Brand Strategy",
+      subtitle: "Positioning, Narrative & Identity Systems",
+      description:
+        "We engineer high-leverage brand foundations for category-defining organizations. Through rigorous qualitative research and visual semiotics, we construct distinctive identities that command institutional respect.",
+      metrics: ["+340% Brand Recall", "Category Leadership", "Global Trademarks"],
+      deliverables: [
+        "Brand Archetype & Positioning Manifesto",
+        "Comprehensive Visual Identity & Kinetic Guidelines",
+        "Design Tokens & Typography Licensing Architecture",
+        "Verbal Identity & Editorial Tone of Voice",
+        "Investor & Market Launch Narrative Assets",
+      ],
+    },
+    {
+      title: "UI/UX Design",
+      subtitle: "Spatial Products & Human-Grade Digital Experiences",
+      description:
+        "Digital interfaces calibrated for sensory delight, micro-interaction fluidity, and zero cognitive friction. We blend ergonomic layout structures with cinematic spatial depth to craft products users fall in love with.",
+      metrics: ["<80ms Interaction Latency", "99.4% Usability Score", "Zero Cognitive Fatigue"],
+      deliverables: [
+        "Multi-Platform Design Systems (Web, iOS, macOS, Spatial)",
+        "High-Fidelity Micro-Interactions & State Prototyping",
+        "Information Architecture & Heuristic Journey Mapping",
+        "Dark/Light Theme Engineering with Semantic Colors",
+        "Accessibility (WCAG 2.1 AAA) Compliant Design Tokens",
+      ],
+    },
+    {
+      title: "Web Development",
+      subtitle: "High-Performance Modern Web Engineering",
+      description:
+        "Clean, maintainable, ultra-fast codebases engineered on modern stacks. From real-time Canvas and WebGL shaders to sub-second serverless rendering, we treat frontend performance as a primary design material.",
+      metrics: ["100/100 Lighthouse Performance", "Sub-second TTFB", "Global Edge Cache"],
+      deliverables: [
+        "Full-Stack Next.js 16 App Router & Server Components",
+        "Hardware-Accelerated HTML5 Canvas & WebGL Shaders",
+        "Smooth Scroll Orchestration & Physics Interp Engine",
+        "Fluid Micro-Interactions & Hardware LERP Transitions",
+        "Enterprise API Integration & Edge Runtime Security",
+      ],
+    },
+    {
+      title: "Digital Marketing",
+      subtitle: "Growth Engineering & High-Precision Campaigns",
+      description:
+        "Data-driven distribution frameworks that amplify market dominance. We connect high-converting digital surfaces with algorithmic acquisition funnels to turn traffic into enduring institutional equity.",
+      metrics: ["4.8x Average Return on Ad Spend", "78% Lower CAC", "Scalable Funnel Velocity"],
+      deliverables: [
+        "High-Conversion Lander Funnels & Dynamic Copy",
+        "Behavioral Analytics & Multi-Touch Attribution",
+        "Automated CRM & Enterprise Email Journeys",
+        "Organic Visibility & Programmatic Search Authority",
+        "Real-Time Telemetry & Performance Dashboards",
+      ],
+    },
+  ],
+  worksTag: "Portfolio",
+  worksTitlePre: "Selected",
+  worksTitleHighlight: "commissions",
+  worksCurated: "Curated Portfolio // 2025–2026",
+  worksExplore: "Explore Case Study",
+  works: [
+    { category: "Spatial Computing", desc: "Autonomous spatial intelligence platform designed for institutional asset management." },
+    { category: "Automotive Tech", desc: "Real-time interactive 3D configurator and vehicle telemetry experience for electric hypercars." },
+    { category: "Global Liquidity", desc: "Complete visual identity and transaction terminal for next-generation cross-border capital." },
+    { category: "Quantum Robotics", desc: "Cinematic web presence and technical documentation suite for quantum photonics." },
+  ],
 };
 
 export const translations: Record<Lang, Strings> = { pt, en };

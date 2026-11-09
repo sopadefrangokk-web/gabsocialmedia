@@ -428,20 +428,20 @@ function HomeContent() {
           <div>
             <div className="flex items-center gap-3 mb-3">
               <span className="text-[10px] font-semibold uppercase tracking-[0.32em] text-purple-400">
-                Portfolio
+                {t.worksTag}
               </span>
               <div className="w-8 h-[1px] bg-purple-500/40" />
             </div>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight">
-              Selected{" "}
+              {t.worksTitlePre}{" "}
               <span className="font-serif-italic font-normal text-purple-200">
-                commissions
+                {t.worksTitleHighlight}
               </span>
               .
             </h2>
           </div>
           <span className="text-xs font-mono text-purple-400 tracking-widest uppercase">
-            Curated Portfolio // 2025–2026
+            {t.worksCurated}
           </span>
         </div>
 
@@ -449,27 +449,19 @@ function HomeContent() {
           {[
             {
               title: "Hyperia OS",
-              category: "Spatial Computing",
               year: "2026",
-              desc: "Autonomous spatial intelligence platform designed for institutional asset management.",
             },
             {
               title: "Kinesis Motors",
-              category: "Automotive Tech",
               year: "2025",
-              desc: "Real-time interactive 3D configurator and vehicle telemetry experience for electric hypercars.",
             },
             {
               title: "Solstice Pay",
-              category: "Global Liquidity",
               year: "2026",
-              desc: "Complete visual identity and transaction terminal for next-generation cross-border capital.",
             },
             {
               title: "Aether Labs",
-              category: "Quantum Robotics",
               year: "2025",
-              desc: "Cinematic web presence and technical documentation suite for quantum photonics.",
             },
           ].map((item, i) => (
             <div
@@ -478,20 +470,20 @@ function HomeContent() {
             >
               <div>
                 <div className="flex justify-between items-center text-xs font-mono text-purple-300 mb-4">
-                  <span>{item.category}</span>
+                  <span>{t.works[i].category}</span>
                   <span>{item.year}</span>
                 </div>
                 <h3 className="text-2xl font-bold text-white group-hover:text-purple-200 transition-colors mb-2">
                   {item.title}
                 </h3>
                 <p className="text-sm text-zinc-400 leading-relaxed">
-                  {item.desc}
+                  {t.works[i].desc}
                 </p>
               </div>
 
               <div className="pt-8 flex items-center justify-between border-t border-white/[0.06] mt-6">
                 <span className="text-xs font-medium tracking-wider uppercase text-zinc-300 group-hover:text-white transition-colors">
-                  Explore Case Study
+                  {t.worksExplore}
                 </span>
                 <div className="w-8 h-8 rounded-full border border-purple-500/40 flex items-center justify-center group-hover:bg-purple-600 group-hover:text-white transition-all shadow-md">
                   <ArrowRight className="w-3.5 h-3.5" />
