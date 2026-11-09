@@ -530,10 +530,6 @@ function HomeContent() {
             ?
           </h2>
 
-          <p className="text-zinc-400 text-base leading-relaxed mb-10">
-            {t.contactText}
-          </p>
-
           <button
             onClick={() => setIsContactModalOpen(true)}
             className="inline-flex items-center gap-3 px-10 py-4 rounded-full bg-gradient-to-r from-purple-600 via-purple-500 to-indigo-600 text-white text-xs font-bold tracking-widest uppercase shadow-[0_0_40px_rgba(168,85,247,0.5)] hover:shadow-[0_0_60px_rgba(168,85,247,0.8)] transition-all duration-300 hover:scale-105"
