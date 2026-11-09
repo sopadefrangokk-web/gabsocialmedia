@@ -90,6 +90,15 @@ export interface Strings {
   worksCurated: string;
   worksExplore: string;
   works: { category: string; desc: string }[];
+  personTag: string;
+  personTitlePre: string;
+  personTitleHighlight: string;
+  personP1: string;
+  personP2: string;
+  personP3: string;
+  personBadgeDirect: string;
+  personBadgeStrategy: string;
+  personSignatureRole: string;
 }
 
 const pt: Strings = {
@@ -243,6 +252,15 @@ const pt: Strings = {
     { category: "Liquidez Global", desc: "Identidade visual completa e terminal de transações para capital transfronteiriço de última geração." },
     { category: "Robótica Quântica", desc: "Presença web cinematográfica e suíte de documentação técnica para fotônica quântica." },
   ],
+  personTag: "Apresentação",
+  personTitlePre: "Quem está por trás",
+  personTitleHighlight: "do seu perfil",
+  personP1: "Eu sou Gabriel. Mais do que cuidar das publicações, meu trabalho é entender o seu negócio, encontrar a melhor forma de comunicar seu valor e construir uma presença digital que faça sentido para seus objetivos.",
+  personP2: "Cada conteúdo tem uma intenção, cada escolha faz parte de uma estratégia e cada etapa é acompanhada de perto por mim.",
+  personP3: "Você não vai falar com uma equipe que repassa tarefas. Vai falar diretamente com quem pensa, planeja e cuida do seu perfil.",
+  personBadgeDirect: "Atendimento direto comigo",
+  personBadgeStrategy: "Estratégia + Acompanhamento próximo",
+  personSignatureRole: "Gabriel • Social Media Strategist",
 };
 
 const en: Strings = {
@@ -396,6 +414,15 @@ const en: Strings = {
     { category: "Global Liquidity", desc: "Complete visual identity and transaction terminal for next-generation cross-border capital." },
     { category: "Quantum Robotics", desc: "Cinematic web presence and technical documentation suite for quantum photonics." },
   ],
+  personTag: "Introduction",
+  personTitlePre: "Who is behind",
+  personTitleHighlight: "your profile",
+  personP1: "I'm Gabriel. More than managing posts, my work is understanding your business, finding the best way to communicate your value and building a digital presence that makes sense for your goals.",
+  personP2: "Every piece of content has an intention, every choice is part of a strategy and every step is closely followed by me.",
+  personP3: "You won't talk to a team passing tasks around. You'll talk directly to the person who thinks, plans and takes care of your profile.",
+  personBadgeDirect: "Direct support from me",
+  personBadgeStrategy: "Strategy + close follow-up",
+  personSignatureRole: "Gabriel • Social Media Strategist",
 };
 
 export const translations: Record<Lang, Strings> = { pt, en };

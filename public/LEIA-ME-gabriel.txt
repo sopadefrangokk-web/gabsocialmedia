@@ -1,0 +1,11 @@
+INSTRUÇÃO - FOTO DE APRESENTAÇÃO
+==================================
+
+Salve a imagem do Gabriel (a foto enviada na conversa) como:
+  public/gabriel.jpg
+
+A seção de apresentação (AboutPerson) usa /gabriel.jpg automaticamente.
+Enquanto o arquivo não existir, o site mostra um placeholder estilizado
+com as iniciais GB e uma instrução — nenhum erro visual.
+
+Formato sugerido: JPG vertical (3:4), foco no rosto.

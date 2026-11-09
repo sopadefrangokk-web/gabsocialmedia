@@ -15,6 +15,7 @@ import { ScrollCanvas } from "@/components/ScrollCanvas";
 import { ContactModal } from "@/components/ContactModal";
 import { ServicesSection } from "@/components/ServicesSection";
 import { BentoHero } from "@/components/BentoHero";
+import { AboutPerson } from "@/components/AboutPerson";
 import { GabrielLogo } from "@/components/GabrielLogo";
 import { LanguageProvider, useLanguage } from "@/components/LanguageContext";
 import { LanguageToggle } from "@/components/LanguageToggle";
@@ -399,6 +400,8 @@ function HomeContent() {
           </div>
         </div>
       </section>
+
+      <AboutPerson onContact={() => setIsContactModalOpen(true)} />
 
       <div id="services">
         <ServicesSection />
