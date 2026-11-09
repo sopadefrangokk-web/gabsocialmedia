@@ -255,16 +255,6 @@ function HomeContent() {
                   <span>{t.primaryCta}</span>
                   <ArrowUpRight className="w-4 h-4 text-purple-100 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                 </button>
-
-                <button
-                  onClick={() => setIsPlayingShowreel(true)}
-                  className="group flex items-center gap-3 text-sm font-medium text-zinc-300 hover:text-white transition-colors"
-                >
-                  <div className="w-10 h-10 rounded-full border border-purple-500/35 bg-[#160b28]/80 backdrop-blur-md flex items-center justify-center group-hover:border-purple-400 group-hover:bg-purple-900/40 transition-all shadow-[0_0_15px_rgba(168,85,247,0.25)]">
-                    <Play className="w-3.5 h-3.5 text-purple-300 fill-purple-300 ml-0.5 group-hover:scale-110 transition-transform" />
-                  </div>
-                  <span>{t.howItWorks}</span>
-                </button>
               </div>
 
               <div className="flex items-center gap-3.5 pt-2">

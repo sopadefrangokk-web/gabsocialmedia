@@ -79,7 +79,7 @@ const pt: Strings = {
   heroLine2: "mas",
   heroHighlight: "não vende?",
   heroSubtitle:
-    "Transformamos seguidores e curtidas em faturamento real. Estruturamos narrativas visuais, esteiras de conteúdo e funis de conversão para o seu perfil finalmente monetizar com autoridade.",
+    "Transformo seguidores e curtidas em faturamento real. Estruturo narrativas visuais, esteiras de conteúdo e funis de conversão para o seu perfil finalmente monetizar com autoridade.",
   primaryCta: "Quero Vender Mais",
   howItWorks: "Ver Como Funciona",
   validatedBy: "Validado por",
@@ -154,7 +154,7 @@ const en: Strings = {
   heroLine2: "but it doesn't",
   heroHighlight: "sell?",
   heroSubtitle:
-    "We turn followers and likes into real revenue. We structure visual narratives, content streams and conversion funnels so your profile finally monetizes with authority.",
+    "I turn followers and likes into real revenue. I build visual narratives, content streams and conversion funnels so your profile finally monetizes with authority.",
   primaryCta: "I Want to Sell More",
   howItWorks: "See How It Works",
   validatedBy: "Trusted by",

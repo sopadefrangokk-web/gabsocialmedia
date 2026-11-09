@@ -99,13 +99,13 @@ export function BentoHero({ onContact }: { onContact?: () => void }) {
             <div className="pointer-events-none absolute right-[38%] top-[28%] w-12 h-12 rounded-full border border-purple-400/25" />
             <span className="pointer-events-none absolute right-[30%] top-[18%] text-purple-400/60 text-xl select-none">✦</span>
 
-            <div className="relative z-10 flex flex-col max-w-[62%] min-w-0">
+            <div className="relative z-10 flex flex-col w-full sm:max-w-[52%] lg:max-w-[55%] min-w-0 pr-2 sm:pr-6">
               <span className="inline-flex w-fit items-center gap-2 rounded-full border border-white/[0.08] bg-white/[0.04] px-4 py-1.5 text-[11px] tracking-wide text-zinc-300 mb-6">
                 <span className="w-2 h-2 rounded-full bg-violet-400 shadow-[0_0_10px_rgba(168,85,247,0.9)]" />
                 {t.bentoBadge}
               </span>
 
-              <h1 className="text-[38px] sm:text-5xl xl:text-[56px] font-extrabold leading-[1.04] tracking-tight text-white mb-5">
+              <h1 className="text-[36px] sm:text-[44px] xl:text-[52px] font-extrabold leading-[1.04] tracking-tight text-white mb-5">
                 {t.bentoTitlePre}{" "}
                 <span className="bg-gradient-to-r from-violet-400 via-fuchsia-400 to-violet-300 bg-clip-text text-transparent">
                   {t.bentoTitleHighlight1}
@@ -117,7 +117,7 @@ export function BentoHero({ onContact }: { onContact?: () => void }) {
                 </span>
               </h1>
 
-              <p className="text-zinc-300 text-sm sm:text-[15px] leading-relaxed mb-8 max-w-md">
+              <p className="text-zinc-300 text-sm sm:text-[15px] leading-relaxed mb-8 max-w-[340px] sm:max-w-[360px]">
                 {t.bentoSubtitle}
               </p>
 
@@ -148,12 +148,12 @@ export function BentoHero({ onContact }: { onContact?: () => void }) {
             </div>
 
             {/* ----- Celular 3D + ícones flutuantes ----- */}
-            <div className="pointer-events-none absolute right-2 sm:right-8 lg:right-14 bottom-0 top-0 hidden sm:flex items-end lg:items-center justify-center w-[46%] max-w-[340px]">
+            <div className="pointer-events-none absolute right-0 sm:right-6 lg:right-10 bottom-0 top-0 hidden sm:flex items-end lg:items-center justify-center w-[40%] max-w-[300px] ml-auto">
               <div className="relative translate-y-6 lg:translate-y-2">
                 {/* glow atrás */}
                 <div className="absolute inset-0 bg-purple-600/30 blur-[60px] rounded-full scale-90" />
                 {/* celular */}
-                <div className="relative w-[190px] sm:w-[220px] lg:w-[250px] aspect-[9/19] rounded-[38px] border border-white/25 bg-[#0D0619] shadow-[0_30px_80px_rgba(0,0,0,0.7)] -rotate-[8deg] overflow-hidden">
+                <div className="relative w-[180px] sm:w-[200px] lg:w-[230px] aspect-[9/19] rounded-[38px] border border-white/25 bg-[#0D0619] shadow-[0_30px_80px_rgba(0,0,0,0.7)] -rotate-[8deg] overflow-hidden">
                   <div className="absolute inset-[6px] rounded-[32px] overflow-hidden bg-gradient-to-br from-[#3B0A6E] via-[#1E0A3A] to-[#0F0520]">
                     <div className="absolute -top-10 -left-10 w-40 h-40 rounded-full bg-fuchsia-500/40 blur-2xl" />
                     <div className="absolute bottom-0 right-0 w-48 h-48 rounded-full bg-violet-500/50 blur-2xl" />
@@ -165,19 +165,19 @@ export function BentoHero({ onContact }: { onContact?: () => void }) {
                 </div>
 
                 {/* ícones flutuantes */}
-                <div className="absolute -left-10 top-[18%] w-14 h-14 sm:w-16 sm:h-16 rounded-2xl border border-purple-300/40 bg-gradient-to-br from-violet-500 to-purple-700 flex items-center justify-center shadow-[0_12px_30px_rgba(124,58,237,0.55)] -rotate-6 backdrop-blur">
-                  <Camera className="w-8 h-8 text-white" />
+                <div className="absolute -left-4 top-[18%] w-12 h-12 sm:w-14 sm:h-14 rounded-2xl border border-purple-300/40 bg-gradient-to-br from-violet-500 to-purple-700 flex items-center justify-center shadow-[0_12px_30px_rgba(124,58,237,0.55)] -rotate-6 backdrop-blur">
+                  <Camera className="w-7 h-7 text-white" />
                 </div>
-                <div className="absolute -right-8 top-[30%] w-14 h-14 sm:w-16 sm:h-16 rounded-2xl border border-white/20 bg-[#160B2A]/95 flex items-center justify-center shadow-[0_12px_30px_rgba(0,0,0,0.6)] rotate-3">
-                  <Music2 className="w-8 h-8 text-white" />
+                <div className="absolute -right-4 top-[30%] w-12 h-12 sm:w-14 sm:h-14 rounded-2xl border border-white/20 bg-[#160B2A]/95 flex items-center justify-center shadow-[0_12px_30px_rgba(0,0,0,0.6)] rotate-3">
+                  <Music2 className="w-7 h-7 text-white" />
                 </div>
-                <div className="absolute -left-6 top-[52%] w-14 h-14 sm:w-16 sm:h-16 rounded-2xl border border-white/20 bg-[#160B2A]/95 flex items-center justify-center shadow-[0_12px_30px_rgba(0,0,0,0.6)] -rotate-3">
-                  <span className="w-9 h-9 rounded-xl bg-white flex items-center justify-center">
-                    <Play className="w-5 h-5 text-[#1A0D2E] fill-[#1A0D2E] ml-0.5" />
+                <div className="absolute -left-2 top-[52%] w-12 h-12 sm:w-14 sm:h-14 rounded-2xl border border-white/20 bg-[#160B2A]/95 flex items-center justify-center shadow-[0_12px_30px_rgba(0,0,0,0.6)] -rotate-3">
+                  <span className="w-8 h-8 rounded-xl bg-white flex items-center justify-center">
+                    <Play className="w-4.5 h-4.5 text-[#1A0D2E] fill-[#1A0D2E] ml-0.5" />
                   </span>
                 </div>
-                <div className="absolute -right-4 bottom-[18%] w-14 h-14 sm:w-16 sm:h-16 rounded-2xl border border-purple-300/40 bg-gradient-to-br from-[#2A1150] to-[#1A0A30] flex items-center justify-center shadow-[0_12px_30px_rgba(124,58,237,0.45)] rotate-2">
-                  <TrendingUp className="w-8 h-8 text-white" />
+                <div className="absolute -right-2 bottom-[18%] w-12 h-12 sm:w-14 sm:h-14 rounded-2xl border border-purple-300/40 bg-gradient-to-br from-[#2A1150] to-[#1A0A30] flex items-center justify-center shadow-[0_12px_30px_rgba(124,58,237,0.45)] rotate-2">
+                  <TrendingUp className="w-7 h-7 text-white" />
                 </div>
 
                 {/* anel orbital */}
