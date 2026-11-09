@@ -50,12 +50,12 @@ export function DiagnosisSection() {
     setGlow({ x: px * 100, y: py * 100, active: true });
   };
 
-  const c340 = useCountUp(340, visible);
+  const c90 = useCountUp(90, visible);
   const c10 = useCountUp(10, visible);
   const c120 = useCountUp(120, visible);
 
   const stats = [
-    { icon: TrendingUp, value: `+${c340}%`, label: t.stats[0] },
+    { icon: TrendingUp, value: `+${c90}%`, label: t.stats[0] },
     { icon: DollarSign, value: `${c10}K+`, label: t.stats[1] },
     { icon: Target, value: `+${c120}`, label: t.stats[2] },
     { icon: Clock, value: "24/7", label: t.stats[3] },
