@@ -51,12 +51,12 @@ export function DiagnosisSection() {
   };
 
   const c340 = useCountUp(340, visible);
-  const c14 = useCountUp(14, visible);
+  const c10 = useCountUp(10, visible);
   const c120 = useCountUp(120, visible);
 
   const stats = [
     { icon: TrendingUp, value: `+${c340}%`, label: t.stats[0] },
-    { icon: DollarSign, value: `R$ ${c14}M+`, label: t.stats[1] },
+    { icon: DollarSign, value: `${c10}K+`, label: t.stats[1] },
     { icon: Target, value: `+${c120}`, label: t.stats[2] },
     { icon: Clock, value: "24/7", label: t.stats[3] },
   ];
