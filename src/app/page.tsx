@@ -13,7 +13,6 @@ import {
 } from "lucide-react";
 import { ScrollCanvas } from "@/components/ScrollCanvas";
 import { ContactModal } from "@/components/ContactModal";
-import { InfiniteMarquee } from "@/components/InfiniteMarquee";
 import { ServicesSection } from "@/components/ServicesSection";
 import { BentoHero } from "@/components/BentoHero";
 import { GabrielLogo } from "@/components/GabrielLogo";
@@ -364,8 +363,6 @@ function HomeContent() {
       </section>
 
       <BentoHero onContact={() => setIsContactModalOpen(true)} />
-
-      <InfiniteMarquee />
 
       <section id="about" className="relative z-20 w-full py-32 px-6 lg:px-14 xl:px-20 max-w-[1550px] mx-auto">
         <div className="max-w-3xl">
