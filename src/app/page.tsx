@@ -12,7 +12,6 @@ import {
   X,
 } from "lucide-react";
 import { ScrollCanvas } from "@/components/ScrollCanvas";
-import { ContactModal } from "@/components/ContactModal";
 import { ServicesSection } from "@/components/ServicesSection";
 import { BentoHero } from "@/components/BentoHero";
 import { AboutPerson } from "@/components/AboutPerson";
@@ -36,7 +35,10 @@ function HomeContent() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeCard, setActiveCard] = useState<number>(1);
   const [isPlayingShowreel, setIsPlayingShowreel] = useState(false);
-  const [isContactModalOpen, setIsContactModalOpen] = useState(false);
+
+  const goToContact = () => {
+    document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
+  };
 
   const navItems = t.nav;
 
@@ -156,7 +158,7 @@ function HomeContent() {
           <div className="flex items-center gap-2.5">
             <LanguageToggle />
             <button
-              onClick={() => setIsContactModalOpen(true)}
+              onClick={() => goToContact()}
               className="group hidden sm:flex items-center gap-2 px-6 py-2 rounded-full border border-purple-500/35 bg-[#160c27]/80 backdrop-blur-md text-sm font-medium text-white hover:border-purple-400 hover:bg-purple-900/35 transition-all duration-300 hover:shadow-[0_0_25px_rgba(168,85,247,0.4)]"
             >
               <span>{t.scheduleSession}</span>
@@ -250,7 +252,7 @@ function HomeContent() {
 
               <div className="flex flex-wrap items-center gap-5 sm:gap-6 mb-8">
                 <button
-                  onClick={() => setIsContactModalOpen(true)}
+                  onClick={() => goToContact()}
                   className="group relative inline-flex items-center gap-2.5 px-8 py-3.5 rounded-full bg-gradient-to-r from-purple-600 via-purple-500 to-indigo-600 text-white text-sm font-semibold shadow-[0_0_35px_rgba(168,85,247,0.5)] hover:shadow-[0_0_50px_rgba(168,85,247,0.8)] transition-all duration-300 hover:scale-[1.03] active:scale-[0.98]"
                 >
                   <span>{t.primaryCta}</span>
@@ -345,7 +347,7 @@ function HomeContent() {
         </main>
       </section>
 
-      <BentoHero onContact={() => setIsContactModalOpen(true)} />
+      <BentoHero onContact={() => goToContact()} />
 
       <section id="about" className="relative z-20 w-full min-h-[90vh] flex items-center py-16 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-10 xl:px-14 max-w-[1550px] mx-auto">
         {/* Painel em vidro fosco — ocupa a largura da tela para destaque */}
@@ -402,7 +404,7 @@ function HomeContent() {
         </div>
       </section>
 
-      <AboutPerson onContact={() => setIsContactModalOpen(true)} />
+      <AboutPerson onContact={() => goToContact()} />
 
       <div id="services">
         <ServicesSection />
@@ -501,7 +503,7 @@ function HomeContent() {
       </section>
 
       {/* FAQ — penúltima seção, antes do Contato */}
-      <FaqSection onContact={() => setIsContactModalOpen(true)} />
+      <FaqSection onContact={() => goToContact()} />
 
       <section id="contact" className="relative z-20 w-full py-32 px-6 lg:px-14 xl:px-20 max-w-[1550px] mx-auto border-t border-purple-900/20">
         <div className="max-w-2xl mx-auto text-center">
@@ -519,7 +521,7 @@ function HomeContent() {
           </h2>
 
           <button
-            onClick={() => setIsContactModalOpen(true)}
+            onClick={() => goToContact()}
             className="inline-flex items-center gap-3 px-10 py-4 rounded-full bg-gradient-to-r from-purple-600 via-purple-500 to-indigo-600 text-white text-xs font-bold tracking-widest uppercase shadow-[0_0_40px_rgba(168,85,247,0.5)] hover:shadow-[0_0_60px_rgba(168,85,247,0.8)] transition-all duration-300 hover:scale-105"
           >
             <span>{t.contactCta}</span>
@@ -562,10 +564,7 @@ function HomeContent() {
           </div>
         </div>
       )}
-      <ContactModal
-        isOpen={isContactModalOpen}
-        onClose={() => setIsContactModalOpen(false)}
-      />
+      
     </div>
   );
 }
