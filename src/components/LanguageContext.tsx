@@ -104,6 +104,15 @@ export interface Strings {
   faqTitleHighlight: string;
   faqSubtitle: string;
   faqItems: { q: string; a: string }[];
+  sitesTag: string;
+  sitesTitle: string;
+  sitesTitleHighlight: string;
+  sitesP1: string;
+  sitesP2: string;
+  sitesCta: string;
+  sitesBadge1: string;
+  sitesBadge2: string;
+  sitesBadge3: string;
 }
 
 const pt: Strings = {
@@ -288,6 +297,15 @@ const pt: Strings = {
       a: "O pagamento é mensal, simples e transparente: Pix ou cartão de crédito, sem taxa escondida e sem fidelidade forçada. Você começa com o diagnóstico gratuito, escolhe o plano ideal para o seu momento e só então ativamos o trabalho. Tudo é formalizado em contrato, com recibo e acompanhamento de perto por mim — direto comigo, sem intermediários.",
     },
   ],
+  sitesTag: "Criação de Sites",
+  sitesTitle: "Seu negócio merece ir além das",
+  sitesTitleHighlight: "redes sociais.",
+  sitesP1: "Transformo sua presença digital em uma experiência profissional com sites modernos, estratégicos e personalizados. Soluções pensadas para pequenos negócios, profissionais autônomos e prestadores de serviço que desejam fortalecer sua marca, ampliar sua visibilidade e conquistar novas oportunidades.",
+  sitesP2: "Tudo isso com um site responsivo, desenvolvido para oferecer uma experiência fluida em celulares, tablets e computadores.",
+  sitesCta: "Quero levar meu negócio para a internet",
+  sitesBadge1: "100% Responsivo",
+  sitesBadge2: "Design Personalizado",
+  sitesBadge3: "Foco em Conversão",
 };
 
 const en: Strings = {
@@ -472,6 +490,15 @@ const en: Strings = {
       a: "Payment is monthly, simple and transparent: Pix or credit card, no hidden fees and no forced lock-in. You start with the free diagnosis, choose the ideal plan for your stage and only then we activate the work. Everything is formalized in a contract, with receipt and close follow-up from me — directly with me, no middlemen.",
     },
   ],
+  sitesTag: "Website Creation",
+  sitesTitle: "Your business deserves to go beyond",
+  sitesTitleHighlight: "social media.",
+  sitesP1: "I transform your digital presence into a professional experience with modern, strategic and personalized websites. Solutions designed for small businesses, freelancers and service providers who want to strengthen their brand, expand their visibility and win new opportunities.",
+  sitesP2: "All with a responsive website, developed to offer a smooth experience on phones, tablets and computers.",
+  sitesCta: "I want to take my business online",
+  sitesBadge1: "100% Responsive",
+  sitesBadge2: "Custom Design",
+  sitesBadge3: "Focused on Conversion",
 };
 
 export const translations: Record<Lang, Strings> = { pt, en };

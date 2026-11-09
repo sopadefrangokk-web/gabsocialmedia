@@ -16,6 +16,7 @@ import { ServicesSection } from "@/components/ServicesSection";
 import { BentoHero } from "@/components/BentoHero";
 import { AboutPerson } from "@/components/AboutPerson";
 import { FaqSection } from "@/components/FaqSection";
+import { WebsitesSection } from "@/components/WebsitesSection";
 import { GabrielLogo } from "@/components/GabrielLogo";
 import { LanguageProvider, useLanguage } from "@/components/LanguageContext";
 import { LanguageToggle } from "@/components/LanguageToggle";
@@ -504,6 +505,9 @@ function HomeContent() {
 
       {/* FAQ — penúltima seção, antes do Contato */}
       <FaqSection onContact={() => goToContact()} />
+
+      {/* Criação de Sites — penúltima seção */}
+      <WebsitesSection />
 
       <section id="contact" className="relative z-20 w-full py-32 px-6 lg:px-14 xl:px-20 max-w-[1550px] mx-auto border-t border-purple-900/20">
         <div className="max-w-2xl mx-auto text-center">

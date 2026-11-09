@@ -1,0 +1,8 @@
+INSTRUÇÃO - FOTO DA SEÇÃO DE SITES
+====================================
+
+Salve a foto do Gabriel no escritório (com laptop) como:
+  public/gabriel-site.jpg
+
+A seção de Criação de Sites usa /gabriel-site.jpg automaticamente.
+Enquanto o arquivo não existir, o site mostra um placeholder estilizado.
