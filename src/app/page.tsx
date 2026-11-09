@@ -16,6 +16,8 @@ import { ScrollCanvas } from "@/components/ScrollCanvas";
 import { ContactModal } from "@/components/ContactModal";
 import { InfiniteMarquee } from "@/components/InfiniteMarquee";
 import { ServicesSection } from "@/components/ServicesSection";
+import { BentoHero } from "@/components/BentoHero";
+import { GabrielLogo } from "@/components/GabrielLogo";
 
 export default function Home() {
   const [activeNav, setActiveNav] = useState("Início");
@@ -125,44 +127,11 @@ export default function Home() {
           
           {/* HEADER / NAVBAR EM ROXO E PRETO */}
           <header className="relative z-50 w-full px-6 lg:px-14 pt-7 pb-4 flex items-center justify-between">
-            {/* Logo NOVA com anel orbital no A */}
             <div
               onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-              className="flex items-center gap-1 cursor-pointer group"
+              className="cursor-pointer"
             >
-              <div className="relative flex items-center">
-                <span className="text-2xl lg:text-[26px] font-black tracking-[0.2em] text-white">
-                  NOV
-                </span>
-                <div className="relative inline-flex items-center justify-center">
-                  <span className="text-2xl lg:text-[26px] font-black tracking-[0.2em] text-white pl-0.5">
-                    A
-                  </span>
-                  <svg
-                    className="absolute -inset-x-2 -inset-y-1.5 w-[36px] h-[36px] text-purple-400 group-hover:rotate-12 transition-transform duration-500 pointer-events-none"
-                    viewBox="0 0 40 40"
-                    fill="none"
-                  >
-                    <ellipse
-                      cx="20"
-                      cy="20"
-                      rx="16"
-                      ry="6"
-                      transform="rotate(-25 20 20)"
-                      stroke="currentColor"
-                      strokeWidth="1.8"
-                      className="opacity-90"
-                    />
-                    <circle
-                      cx="33"
-                      cy="14"
-                      r="2"
-                      fill="#c084fc"
-                      className="animate-pulse"
-                    />
-                  </svg>
-                </div>
-              </div>
+              <GabrielLogo variant="navbar" />
             </div>
 
             {/* Menu Central em Cápsula (Pill) de Vidro Fosco */}
@@ -443,6 +412,11 @@ export default function Home() {
       </section>
 
       {/* =========================================================================
+          SEÇÃO BENTO GABRIEL SOCIAL MEDIA (INSPIRADA NO LAYOUT FLY STUDIO ROXO)
+          ========================================================================= */}
+      <BentoHero onContact={() => setIsContactModalOpen(true)} />
+
+      {/* =========================================================================
           CARROSSEL INFINITO DUPLO DE LOGOS (DIREITA->ESQUERDA & ESQUERDA->DIREITA)
           ========================================================================= */}
       <InfiniteMarquee />
@@ -613,12 +587,11 @@ export default function Home() {
 
       {/* FOOTER */}
       <footer className="relative z-20 w-full py-12 px-6 lg:px-14 border-t border-purple-900/20 bg-[#05020a] flex flex-col sm:flex-row items-center justify-between text-xs text-zinc-500 gap-4">
-        <div className="flex items-center gap-2">
-          <span className="font-bold tracking-widest text-purple-400">NOVA</span>
-          <span>• Atelier of Digital Architecture</span>
+        <div className="flex items-center gap-3">
+          <GabrielLogo variant="compact" />
         </div>
         <div>
-          © 2026 NOVA Agency. All rights reserved. 8K Kinetic Edition.
+          © 2026 Gabriel Social Media. Todos os direitos reservados.
         </div>
       </footer>
 

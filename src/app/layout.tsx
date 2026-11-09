@@ -14,8 +14,8 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "NOVA — Creative Agency",
-  description: "Turning bold ideas into relevant brands, digital experiences and real results.",
+  title: "Gabriel Social Media",
+  description: "Estratégia criativa, conteúdo que conecta e resultados reais para o seu negócio.",
 };
 
 export default function RootLayout({
@@ -24,7 +24,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${jakarta.variable} ${playfair.variable} dark`}>
+    <html lang="pt-BR" className={`${jakarta.variable} ${playfair.variable} dark`}>
       <body className="min-h-screen bg-[#06030b] text-white font-sans antialiased selection:bg-purple-600 selection:text-white overflow-x-hidden">
         {children}
       </body>
