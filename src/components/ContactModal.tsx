@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import { X, Send, CheckCircle2 } from "lucide-react";
+import { useLanguage } from "./LanguageContext";
 
 interface ContactModalProps {
   isOpen: boolean;
@@ -9,23 +10,13 @@ interface ContactModalProps {
 }
 
 export function ContactModal({ isOpen, onClose }: ContactModalProps) {
+  const { t, lang } = useLanguage();
   const [submitted, setSubmitted] = useState(false);
-  const [selectedService, setSelectedService] = useState("Funil de Vendas no Direct");
-  const [selectedRevenue, setSelectedRevenue] = useState("R$ 10k - R$ 30k/mês");
+  const [selectedService, setSelectedService] = useState(t.modalServices[0]);
+  const [selectedRevenue, setSelectedRevenue] = useState(t.modalRevenues[1]);
 
-  const services = [
-    "Estratégia de Conteúdo",
-    "Posicionamento Visual",
-    "Funil de Vendas no Direct",
-    "Tráfego & Escala",
-  ];
-
-  const revenues = [
-    "Iniciando (< R$ 10k)",
-    "R$ 10k - R$ 30k/mês",
-    "R$ 30k - R$ 80k/mês",
-    "+ R$ 100k/mês",
-  ];
+  const services = t.modalServices;
+  const revenues = t.modalRevenues;
 
   if (!isOpen) return null;
 
@@ -63,26 +54,26 @@ export function ContactModal({ isOpen, onClose }: ContactModalProps) {
             <div className="flex items-center gap-2 mb-2">
               <span className="w-2 h-2 rounded-full bg-purple-400 animate-pulse" />
               <span className="text-[10px] font-mono tracking-widest text-purple-300 uppercase">
-                Sessão Estratégica Individual
+                {lang === "pt" ? "Sessão Estratégica Individual" : "Individual Strategic Session"}
               </span>
             </div>
 
             <h3 className="text-2xl sm:text-3xl font-bold text-white mb-2 tracking-tight">
-              Agende seu{" "}
+              {t.modalTitlePre}{" "}
               <span className="font-serif-italic font-normal text-purple-200">
-                diagnóstico
+                {t.modalTitleHighlight}
               </span>
               .
             </h3>
             <p className="text-xs sm:text-sm text-zinc-400 mb-6">
-              Mapeie os gargalos que estão impedindo o seu perfil do Instagram de converter seguidores em clientes.
+              {t.modalSubtitle}
             </p>
 
             <form onSubmit={handleSubmit} className="space-y-4">
               {/* Seleção de Objetivo Principal */}
               <div>
                 <label className="block text-[11px] font-semibold text-zinc-400 uppercase tracking-wider mb-2">
-                  Maior Gargalo Atual
+                  {t.modalLabelBottleneck}
                 </label>
                 <div className="grid grid-cols-2 gap-2">
                   {services.map((srv) => (
@@ -106,7 +97,7 @@ export function ContactModal({ isOpen, onClose }: ContactModalProps) {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 <div>
                   <label className="block text-[11px] font-semibold text-zinc-400 uppercase tracking-wider mb-1.5">
-                    Seu Nome
+                    {t.modalLabelName}
                   </label>
                   <input
                     required
@@ -117,7 +108,7 @@ export function ContactModal({ isOpen, onClose }: ContactModalProps) {
                 </div>
                 <div>
                   <label className="block text-[11px] font-semibold text-zinc-400 uppercase tracking-wider mb-1.5">
-                    WhatsApp (com DDD)
+                    {t.modalLabelPhone}
                   </label>
                   <input
                     required
@@ -131,7 +122,7 @@ export function ContactModal({ isOpen, onClose }: ContactModalProps) {
               {/* @ do Instagram */}
               <div>
                 <label className="block text-[11px] font-semibold text-zinc-400 uppercase tracking-wider mb-1.5">
-                  @ do seu Instagram
+                  {t.modalLabelInstagram}
                 </label>
                 <input
                   required
@@ -144,7 +135,7 @@ export function ContactModal({ isOpen, onClose }: ContactModalProps) {
               {/* Faturamento Atual */}
               <div>
                 <label className="block text-[11px] font-semibold text-zinc-400 uppercase tracking-wider mb-1.5">
-                  Faixa Atual de Faturamento
+                  {t.modalLabelRevenue}
                 </label>
                 <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
                   {revenues.map((r) => (
@@ -169,7 +160,7 @@ export function ContactModal({ isOpen, onClose }: ContactModalProps) {
                 type="submit"
                 className="w-full py-3.5 rounded-full bg-gradient-to-r from-purple-600 via-purple-500 to-indigo-600 text-white text-xs font-bold tracking-widest uppercase shadow-[0_0_35px_rgba(168,85,247,0.5)] hover:shadow-[0_0_50px_rgba(168,85,247,0.8)] transition-all flex items-center justify-center gap-2 hover:scale-[1.01]"
               >
-                <span>Solicitar Meu Diagnóstico Gratuito</span>
+                <span>{t.modalSubmit}</span>
                 <Send className="w-3.5 h-3.5" />
               </button>
             </form>
@@ -179,9 +170,9 @@ export function ContactModal({ isOpen, onClose }: ContactModalProps) {
             <div className="w-16 h-16 rounded-full bg-purple-600/20 border border-purple-400/50 flex items-center justify-center mb-4 text-purple-300 shadow-[0_0_30px_rgba(168,85,247,0.4)]">
               <CheckCircle2 className="w-8 h-8 text-purple-300" />
             </div>
-            <h3 className="text-2xl font-bold text-white mb-2">Diagnóstico Solicitado com Sucesso</h3>
+            <h3 className="text-2xl font-bold text-white mb-2">{t.modalSuccessTitle}</h3>
             <p className="text-sm text-zinc-400 max-w-sm">
-              Nossa equipe já está analisando o seu perfil. Entraremos em contato via WhatsApp nas próximas horas.
+              {t.modalSuccessText}
             </p>
           </div>
         )}

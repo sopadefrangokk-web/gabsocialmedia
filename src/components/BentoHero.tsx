@@ -17,11 +17,14 @@ import {
   Sparkles,
 } from "lucide-react";
 import { GabrielLogo } from "./GabrielLogo";
+import { LanguageToggle } from "./LanguageToggle";
+import { useLanguage } from "./LanguageContext";
 
-const NAV = ["Início", "Serviços", "Projetos", "Sobre", "Contato"];
+const SECTION_IDS = ["home", "services", "work", "about", "contact"];
 
 export function BentoHero({ onContact }: { onContact?: () => void }) {
-  const [activeNav, setActiveNav] = useState("Início");
+  const { t } = useLanguage();
+  const [activeId, setActiveId] = useState("home");
   const [email, setEmail] = useState("");
   const [subscribed, setSubscribed] = useState(false);
 
@@ -35,16 +38,10 @@ export function BentoHero({ onContact }: { onContact?: () => void }) {
     }, 3200);
   };
 
-  const scrollTo = (item: string) => {
-    setActiveNav(item);
-    const map: Record<string, string> = {
-      Início: "home",
-      Serviços: "services",
-      Projetos: "work",
-      Sobre: "about",
-      Contato: "contact",
-    };
-    const el = document.getElementById(map[item] || "home");
+  const scrollTo = (index: number) => {
+    const id = SECTION_IDS[index] || "home";
+    setActiveId(id);
+    const el = document.getElementById(id);
     if (el) el.scrollIntoView({ behavior: "smooth" });
   };
 
@@ -65,12 +62,12 @@ export function BentoHero({ onContact }: { onContact?: () => void }) {
           <GabrielLogo variant="navbar" />
 
           <nav className="hidden lg:flex items-center gap-1 rounded-full bg-white/[0.03] border border-white/[0.06] p-1">
-            {NAV.map((item) => (
+            {t.nav.map((item, i) => (
               <button
-                key={item}
-                onClick={() => scrollTo(item)}
+                key={item + i}
+                onClick={() => scrollTo(i)}
                 className={`px-5 py-1.5 rounded-full text-[13px] font-medium transition-all ${
-                  activeNav === item
+                  activeId === SECTION_IDS[i]
                     ? "bg-violet-600/25 border border-violet-400/50 text-white shadow-[0_0_18px_rgba(168,85,247,0.35)]"
                     : "text-zinc-400 hover:text-white hover:bg-white/[0.04] border border-transparent"
                 }`}
@@ -80,13 +77,16 @@ export function BentoHero({ onContact }: { onContact?: () => void }) {
             ))}
           </nav>
 
-          <button
-            onClick={onContact}
-            className="group inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-violet-500 to-fuchsia-500 px-6 py-2.5 text-sm font-semibold text-white shadow-[0_0_28px_rgba(168,85,247,0.45)] hover:shadow-[0_0_40px_rgba(168,85,247,0.65)] hover:scale-[1.02] active:scale-[0.98] transition-all"
-          >
-            Fale Comigo
-            <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
-          </button>
+          <div className="flex items-center gap-2.5">
+            <LanguageToggle compact />
+            <button
+              onClick={onContact}
+              className="group inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-violet-500 to-fuchsia-500 px-6 py-2.5 text-sm font-semibold text-white shadow-[0_0_28px_rgba(168,85,247,0.45)] hover:shadow-[0_0_40px_rgba(168,85,247,0.65)] hover:scale-[1.02] active:scale-[0.98] transition-all"
+            >
+              {t.talkToMe}
+              <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
+            </button>
+          </div>
         </header>
 
         {/* ================= GRID BENTO ================= */}
@@ -102,30 +102,30 @@ export function BentoHero({ onContact }: { onContact?: () => void }) {
             <div className="relative z-10 flex flex-col max-w-[62%] min-w-0">
               <span className="inline-flex w-fit items-center gap-2 rounded-full border border-white/[0.08] bg-white/[0.04] px-4 py-1.5 text-[11px] tracking-wide text-zinc-300 mb-6">
                 <span className="w-2 h-2 rounded-full bg-violet-400 shadow-[0_0_10px_rgba(168,85,247,0.9)]" />
-                Social Media • Conteúdo • Estratégia
+                {t.bentoBadge}
               </span>
 
               <h1 className="text-[38px] sm:text-5xl xl:text-[56px] font-extrabold leading-[1.04] tracking-tight text-white mb-5">
-                Eleve sua{" "}
+                {t.bentoTitlePre}{" "}
                 <span className="bg-gradient-to-r from-violet-400 via-fuchsia-400 to-violet-300 bg-clip-text text-transparent">
-                  marca
+                  {t.bentoTitleHighlight1}
                 </span>
                 <br />
-                nas redes{" "}
+                {t.bentoTitleMid}{" "}
                 <span className="bg-gradient-to-r from-violet-300 via-fuchsia-400 to-purple-400 bg-clip-text text-transparent">
-                  sociais.
+                  {t.bentoTitleHighlight2}
                 </span>
               </h1>
 
               <p className="text-zinc-300 text-sm sm:text-[15px] leading-relaxed mb-8 max-w-md">
-                Estratégia criativa, conteúdo que conecta e resultados reais para o seu negócio.
+                {t.bentoSubtitle}
               </p>
 
               <ul className="space-y-4 mb-9">
                 {[
-                  { icon: BarChart3, label: "Estratégias personalizadas" },
-                  { icon: Video, label: "Conteúdo criativo e envolvente" },
-                  { icon: Heart, label: "Acompanhamento próximo" },
+                  { icon: BarChart3, label: t.features[0] },
+                  { icon: Video, label: t.features[1] },
+                  { icon: Heart, label: t.features[2] },
                 ].map((f) => (
                   <li key={f.label} className="flex items-center gap-3.5 text-sm text-zinc-200">
                     <span className="w-10 h-10 shrink-0 rounded-xl border border-white/[0.1] bg-white/[0.04] flex items-center justify-center text-zinc-200">
@@ -141,7 +141,7 @@ export function BentoHero({ onContact }: { onContact?: () => void }) {
                   onClick={onContact}
                   className="group inline-flex items-center gap-2.5 rounded-full bg-gradient-to-r from-violet-500 to-fuchsia-500 px-8 py-3.5 text-sm font-semibold text-white shadow-[0_0_35px_rgba(168,85,247,0.5)] hover:shadow-[0_0_50px_rgba(168,85,247,0.75)] hover:scale-[1.03] active:scale-[0.98] transition-all"
                 >
-                  Vamos crescer juntos
+                  {t.growTogether}
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
                 </button>
               </div>
@@ -198,17 +198,17 @@ export function BentoHero({ onContact }: { onContact?: () => void }) {
               <div className="pointer-events-none absolute -right-10 -top-8 text-[120px] leading-none text-purple-600/20 font-black rotate-[-18deg] select-none">✦</div>
               <Sparkles className="w-5 h-5 text-fuchsia-400 mb-4" />
               <h2 className="text-[26px] sm:text-[30px] font-bold leading-tight text-white mb-3">
-                Transforme suas ideias em conteúdo que{" "}
-                <span className="bg-gradient-to-r from-violet-400 to-fuchsia-400 bg-clip-text text-transparent">inspira.</span>
+                {t.transformTitlePre}{" "}
+                <span className="bg-gradient-to-r from-violet-400 to-fuchsia-400 bg-clip-text text-transparent">{t.transformTitleHighlight}</span>
               </h2>
               <p className="text-sm text-zinc-400 leading-relaxed mb-6">
-                Junte-se a mais de <span className="text-violet-400 font-semibold">20k+</span> pessoas que confiam no meu trabalho para crescer no digital.
+                {t.transformTextPre} <span className="text-violet-400 font-semibold">20k+</span> {t.transformTextPost}
               </p>
 
               {subscribed ? (
                 <div className="flex items-center gap-2.5 rounded-full border border-purple-400/40 bg-purple-500/10 px-5 py-3.5 text-sm text-purple-100">
                   <CheckCircle2 className="w-5 h-5 text-purple-300" />
-                  Inscrição confirmada! Fique de olho no seu e-mail.
+                  {t.subscribedMessage}
                 </div>
               ) : (
                 <form onSubmit={handleSubscribe} className="flex flex-col sm:flex-row gap-3">
@@ -219,7 +219,7 @@ export function BentoHero({ onContact }: { onContact?: () => void }) {
                       required
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
-                      placeholder="Seu e-mail"
+                      placeholder={t.emailPlaceholder}
                       className="w-full bg-transparent text-sm text-white placeholder:text-zinc-500 outline-none"
                     />
                   </label>
@@ -227,7 +227,7 @@ export function BentoHero({ onContact }: { onContact?: () => void }) {
                     type="submit"
                     className="shrink-0 rounded-full bg-gradient-to-r from-violet-500 to-fuchsia-500 px-7 py-3 text-sm font-semibold text-white shadow-[0_0_25px_rgba(168,85,247,0.4)] hover:shadow-[0_0_35px_rgba(168,85,247,0.6)] hover:scale-[1.02] active:scale-[0.98] transition-all"
                   >
-                    Inscrever-se
+                    {t.subscribe}
                   </button>
                 </form>
               )}
@@ -241,7 +241,7 @@ export function BentoHero({ onContact }: { onContact?: () => void }) {
                   <TrendingUp className="w-4 h-4 text-violet-300 rotate-[-18deg]" />
                 </span>
                 <span className="text-3xl lg:text-[34px] font-extrabold tracking-tight text-white">20K+</span>
-                <span className="text-xs text-zinc-400 mt-1">Seguidores alcançados</span>
+                <span className="text-xs text-zinc-400 mt-1">{t.followersLabel}</span>
                 {/* linha */}
                 <svg className="mt-auto pt-4 w-full" viewBox="0 0 160 40" fill="none">
                   <path
@@ -259,14 +259,14 @@ export function BentoHero({ onContact }: { onContact?: () => void }) {
               <article className="relative overflow-hidden rounded-[28px] border border-white/[0.08] bg-gradient-to-br from-[#1A0D2E] to-[#0D0618] p-6 lg:p-7">
                 <div className="flex items-center gap-2 mb-5">
                   <Sparkles className="w-4 h-4 text-fuchsia-400" />
-                  <h3 className="text-sm font-semibold text-white">Meus Serviços</h3>
+                  <h3 className="text-sm font-semibold text-white">{t.myServices}</h3>
                 </div>
                 <ul className="space-y-3.5">
                   {[
-                    { icon: BarChart3, text: "Gestão de Redes Sociais" },
-                    { icon: Video, text: "Criação de Conteúdo (Posts & Reels)" },
-                    { icon: Target, text: "Estratégia Digital" },
-                    { icon: Lightbulb, text: "Consultoria Criativa" },
+                    { icon: BarChart3, text: t.serviceItems[0] },
+                    { icon: Video, text: t.serviceItems[1] },
+                    { icon: Target, text: t.serviceItems[2] },
+                    { icon: Lightbulb, text: t.serviceItems[3] },
                   ].map((s) => (
                     <li key={s.text} className="flex items-center gap-3 text-[13px] text-zinc-200 leading-tight">
                       <span className="w-9 h-9 shrink-0 rounded-xl border border-white/[0.1] bg-white/[0.04] flex items-center justify-center">
@@ -277,10 +277,10 @@ export function BentoHero({ onContact }: { onContact?: () => void }) {
                   ))}
                 </ul>
                 <button
-                  onClick={() => scrollTo("Serviços")}
+                  onClick={() => scrollTo(1)}
                   className="group mt-6 inline-flex items-center gap-1.5 text-sm text-violet-400 hover:text-violet-300 font-medium transition-colors"
                 >
-                  Conheça mais
+                  {t.learnMore}
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
                 </button>
               </article>
@@ -294,7 +294,7 @@ export function BentoHero({ onContact }: { onContact?: () => void }) {
                     <Play className="w-4 h-4 text-white fill-white ml-0.5" />
                   </span>
                   <div className="text-3xl lg:text-[34px] font-extrabold tracking-tight text-white">200K+</div>
-                  <div className="text-xs text-zinc-400 mt-1">Visualizações mensais</div>
+                  <div className="text-xs text-zinc-400 mt-1">{t.viewsLabel}</div>
                 </div>
                 {/* barras */}
                 <div className="flex items-end gap-1.5 h-[72px] pt-6">
@@ -315,7 +315,7 @@ export function BentoHero({ onContact }: { onContact?: () => void }) {
         <div className="relative z-10 mt-5 flex flex-col sm:flex-row items-center justify-between gap-4 rounded-[22px] border border-white/[0.06] bg-white/[0.02] px-6 py-4">
           <GabrielLogo variant="compact" />
           <p className="text-[11px] tracking-[0.3em] uppercase text-zinc-500">
-            Social Media • Conteúdo • Estratégia
+            {t.bentoFooterTagline}
           </p>
           <span className="text-xs text-zinc-500">© 2026 Gabriel Social Media</span>
         </div>
