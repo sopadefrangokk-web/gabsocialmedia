@@ -202,7 +202,7 @@ export function BentoHero({ onContact }: { onContact?: () => void }) {
                 <span className="bg-gradient-to-r from-violet-400 to-fuchsia-400 bg-clip-text text-transparent">{t.transformTitleHighlight}</span>
               </h2>
               <p className="text-sm text-zinc-400 leading-relaxed mb-6">
-                {t.transformTextPre} <span className="text-violet-400 font-semibold">10k+</span> {t.transformTextPost}
+                {t.transformTextPre} {t.transformTextPost}
               </p>
 
               {subscribed ? (
