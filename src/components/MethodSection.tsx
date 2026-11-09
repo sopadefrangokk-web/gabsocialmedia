@@ -6,7 +6,7 @@ import { useLanguage } from "./LanguageContext";
 const ICONS = [Target, Search, Calendar, Users, Eye];
 
 export function MethodSection({ onContact }: { onContact?: () => void }) {
-  const { t } = useLanguage();
+  const { t, lang } = useLanguage();
   const ref = useRef<HTMLElement>(null);
   const [visible, setVisible] = useState(false);
   const [paused, setPaused] = useState(false);
@@ -113,12 +113,21 @@ export function MethodSection({ onContact }: { onContact?: () => void }) {
             <button
               key={s.num}
               onClick={() => setActive(i)}
-              className={`h-2 rounded-full transition-all duration-500 ${active === i ? "w-10 bg-gradient-to-r from-violet-400 to-fuchsia-400" : "w-2 bg-zinc-700 hover:bg-zinc-500"}`}
+              className={`h-2.5 rounded-full transition-all duration-500 ${active === i ? "w-12 bg-gradient-to-r from-violet-400 to-fuchsia-400 shadow-[0_0_12px_rgba(217,70,239,0.7)]" : "w-2.5 bg-zinc-600 hover:bg-zinc-400"}`}
               aria-label={s.title}
             />
           ))}
-          <span className="text-[11px] font-mono tracking-widest text-zinc-500 ml-2">
-            {paused ? "PAUSADO" : "ROLANDO"} • passe o mouse para pausar
+          <span className={`inline-flex items-center gap-2 ml-3 rounded-full border px-4 py-2 text-xs sm:text-sm font-mono font-bold tracking-widest backdrop-blur-md transition-all duration-500 ${
+            paused
+              ? "border-fuchsia-400/60 bg-fuchsia-500/20 text-fuchsia-100 shadow-[0_0_20px_rgba(217,70,239,0.35)]"
+              : "border-purple-400/50 bg-purple-500/15 text-purple-200 shadow-[0_0_16px_rgba(168,85,247,0.3)]"
+          }`}>
+            <span className={`w-2 h-2 rounded-full ${paused ? "bg-fuchsia-300" : "bg-purple-300 animate-pulse"}`} />
+            {paused ? (lang === "pt" || undefined ? "PAUSADO" : "PAUSED") : (lang === "pt" || undefined ? "ROLANDO" : "SCROLLING")}
+            <span className="hidden sm:inline">•</span>
+            <span className="hidden sm:inline font-medium normal-case tracking-normal text-[12px] opacity-90">
+              {lang === "pt" || undefined ? "passe o mouse para pausar" : "hover to pause"}
+            </span>
           </span>
         </div>
 
