@@ -99,6 +99,11 @@ export interface Strings {
   personBadgeDirect: string;
   personBadgeStrategy: string;
   personSignatureRole: string;
+  faqTag: string;
+  faqTitlePre: string;
+  faqTitleHighlight: string;
+  faqSubtitle: string;
+  faqItems: { q: string; a: string }[];
 }
 
 const pt: Strings = {
@@ -261,6 +266,28 @@ const pt: Strings = {
   personBadgeDirect: "Atendimento direto comigo",
   personBadgeStrategy: "Estratégia + Acompanhamento próximo",
   personSignatureRole: "Gabriel • Social Media Strategist",
+  faqTag: "Tire suas dúvidas",
+  faqTitlePre: "Perguntas",
+  faqTitleHighlight: "frequentes",
+  faqSubtitle: "Tudo o que você precisa saber antes de começar — sem enrolação, direto ao ponto.",
+  faqItems: [
+    {
+      q: "Preciso ter muitos seguidores para começar?",
+      a: "Não. O número de seguidores não define o seu resultado — o que define é a clareza da sua oferta e o posicionamento do perfil. Começo do zero ou com um perfil pequeno com frequência: construo a base, a narrativa e o conteúdo para atrair o público certo, não qualquer público. Crescimento consistente vem de estratégia, não de quantidade.",
+    },
+    {
+      q: "Quanto tempo leva para ver resultado?",
+      a: "Depende do ponto de partida, do nicho e da frequência. Na maioria dos casos, os primeiros sinais — perfil mais profissional, mensagens mais qualificadas e conteúdo com mais intenção — aparecem entre 30 e 60 dias. Crescimento sólido e vendas recorrentes levam de 3 a 6 meses de consistência. Meu trabalho é acelerar esse processo com estratégia, não com promessas milagrosas.",
+    },
+    {
+      q: "Eu preciso gravar os vídeos?",
+      a: "Depende do formato que funciona melhor para o seu negócio. Posso escrever roteiros e direcionar a gravação — você grava com o celular em poucos minutos por semana, ou, se preferir, produzimos com roteiro e direção para você apenas aparecer. Em alguns casos, trabalhamos com banco de imagens, bastidores e conteúdo criado por mim. Você nunca fica travado por não saber gravar.",
+    },
+    {
+      q: "Como é feito o pagamento?",
+      a: "O pagamento é mensal, simples e transparente: Pix ou cartão de crédito, sem taxa escondida e sem fidelidade forçada. Você começa com o diagnóstico gratuito, escolhe o plano ideal para o seu momento e só então ativamos o trabalho. Tudo é formalizado em contrato, com recibo e acompanhamento de perto por mim — direto comigo, sem intermediários.",
+    },
+  ],
 };
 
 const en: Strings = {
@@ -423,6 +450,28 @@ const en: Strings = {
   personBadgeDirect: "Direct support from me",
   personBadgeStrategy: "Strategy + close follow-up",
   personSignatureRole: "Gabriel • Social Media Strategist",
+  faqTag: "Answer your questions",
+  faqTitlePre: "Frequently asked",
+  faqTitleHighlight: "questions",
+  faqSubtitle: "Everything you need to know before starting — no fluff, straight to the point.",
+  faqItems: [
+    {
+      q: "Do I need many followers to get started?",
+      a: "No. Follower count doesn't drive results — offer clarity and profile positioning do. Whether starting from zero or with a small profile, I build the foundation, narrative and content to attract the right audience, not just any audience. Consistent growth comes from strategy, not volume.",
+    },
+    {
+      q: "How long does it take to see results?",
+      a: "It depends on your starting point, niche and consistency. In most cases, first signals — a more professional profile, more qualified messages and more intentional content — appear within 30 to 60 days. Solid growth and recurring sales take 3 to 6 months of consistency. My job is to accelerate that with strategy, not miracle promises.",
+    },
+    {
+      q: "Do I need to record the videos?",
+      a: "It depends on the format that works best for your business. I can write scripts and direct the recording — you film on your phone in a few minutes per week, or if you prefer, we produce with script and direction so you only show up. In some cases, we work with stock imagery, behind-the-scenes footage and content created by me. You're never stuck because you don't know how to record.",
+    },
+    {
+      q: "How is payment handled?",
+      a: "Payment is monthly, simple and transparent: Pix or credit card, no hidden fees and no forced lock-in. You start with the free diagnosis, choose the ideal plan for your stage and only then we activate the work. Everything is formalized in a contract, with receipt and close follow-up from me — directly with me, no middlemen.",
+    },
+  ],
 };
 
 export const translations: Record<Lang, Strings> = { pt, en };
