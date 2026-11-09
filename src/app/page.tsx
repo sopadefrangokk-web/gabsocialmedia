@@ -413,13 +413,15 @@ function HomeContent() {
             ?
           </h2>
 
-          <button
-            onClick={() => goToContact()}
+          <a
+            href="https://wa.me/5551935017693?text=Ol%C3%A1%2C%20Gabriel!%20Vou%20te%20chamar%20para%20agendarmos%20um%20projeto."
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center gap-3 px-10 py-4 rounded-full bg-gradient-to-r from-purple-600 via-purple-500 to-indigo-600 text-white text-xs font-bold tracking-widest uppercase shadow-[0_0_40px_rgba(168,85,247,0.5)] hover:shadow-[0_0_60px_rgba(168,85,247,0.8)] transition-all duration-300 hover:scale-105"
           >
             <span>{t.contactCta}</span>
             <ArrowUpRight className="w-4 h-4 text-white" />
-          </button>
+          </a>
         </div>
       </section>
 
