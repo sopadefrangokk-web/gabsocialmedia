@@ -1,26 +1,8 @@
 "use client";
 
 import React, { useEffect, useRef, useState } from "react";
-import { Sparkles, TrendingUp, DollarSign, Target, Clock } from "lucide-react";
+import { Sparkles } from "lucide-react";
 import { useLanguage } from "./LanguageContext";
-
-function useCountUp(target: number, active: boolean, duration = 1400) {
-  const [val, setVal] = useState(0);
-  useEffect(() => {
-    if (!active) return;
-    let raf: number;
-    const start = performance.now();
-    const tick = (now: number) => {
-      const p = Math.min((now - start) / duration, 1);
-      const eased = 1 - Math.pow(1 - p, 3);
-      setVal(Math.round(eased * target));
-      if (p < 1) raf = requestAnimationFrame(tick);
-    };
-    raf = requestAnimationFrame(tick);
-    return () => cancelAnimationFrame(raf);
-  }, [active, target, duration]);
-  return val;
-}
 
 export function DiagnosisSection() {
   const { t } = useLanguage();
@@ -49,17 +31,6 @@ export function DiagnosisSection() {
     setTilt({ x: (0.5 - py) * 4, y: (px - 0.5) * 5 });
     setGlow({ x: px * 100, y: py * 100, active: true });
   };
-
-  const c90 = useCountUp(90, visible);
-  const c10 = useCountUp(10, visible);
-  const c120 = useCountUp(120, visible);
-
-  const stats = [
-    { icon: TrendingUp, value: `+${c90}%`, label: t.stats[0] },
-    { icon: DollarSign, value: `${c10}K+`, label: t.stats[1] },
-    { icon: Target, value: `+${c120}`, label: t.stats[2] },
-    { icon: Clock, value: "24/7", label: t.stats[3] },
-  ];
 
   return (
     <section
@@ -143,26 +114,6 @@ export function DiagnosisSection() {
             </p>
           </div>
 
-          {/* métricas interativas com contagem */}
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6">
-            {stats.map((s, i) => (
-              <div
-                key={i}
-                className="group relative rounded-3xl bg-white/[0.04] border border-purple-400/20 backdrop-blur-md p-5 lg:p-7 overflow-hidden transition-all duration-500 hover:-translate-y-1.5 hover:border-purple-300/50 hover:bg-purple-500/10 hover:shadow-[0_16px_40px_rgba(124,58,237,0.3)] cursor-default"
-                style={{ transitionDelay: visible ? `${i * 90}ms` : "0ms" }}
-              >
-                <div className="pointer-events-none absolute -top-8 -right-8 w-24 h-24 rounded-full bg-purple-500/20 blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                <span className="inline-flex w-11 h-11 rounded-2xl bg-gradient-to-br from-violet-500 to-fuchsia-500 items-center justify-center mb-4 shadow-[0_0_20px_rgba(168,85,247,0.45)] group-hover:scale-110 group-hover:rotate-6 transition-transform duration-500">
-                  <s.icon className="w-5 h-5 text-white" />
-                </span>
-                <div className="font-display text-3xl lg:text-4xl font-bold text-purple-200 font-mono drop-shadow-[0_2px_10px_rgba(0,0,0,0.8)]">
-                  {s.value}
-                </div>
-                <div className="text-xs sm:text-sm text-zinc-300 mt-2 leading-snug">{s.label}</div>
-                <span className="absolute bottom-0 left-0 h-[2px] w-full bg-gradient-to-r from-purple-400 to-fuchsia-400 scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500" />
-              </div>
-            ))}
-          </div>
         </div>
       </div>
 

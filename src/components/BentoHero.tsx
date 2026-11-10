@@ -81,10 +81,10 @@ export function BentoHero({ onContact }: { onContact?: () => void }) {
             <LanguageToggle compact />
             <button
               onClick={onContact}
-              className="group inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-violet-500 to-fuchsia-500 px-6 py-2.5 text-sm font-semibold text-white shadow-[0_0_28px_rgba(168,85,247,0.45)] hover:shadow-[0_0_40px_rgba(168,85,247,0.65)] hover:scale-[1.02] active:scale-[0.98] transition-all"
+              className="group inline-flex items-center gap-1.5 rounded-full bg-gradient-to-r from-violet-500 to-fuchsia-500 px-4 py-1.5 text-xs font-semibold text-white shadow-[0_0_20px_rgba(168,85,247,0.45)] hover:shadow-[0_0_28px_rgba(168,85,247,0.65)] hover:scale-[1.02] active:scale-[0.98] transition-all"
             >
               {t.talkToMe}
-              <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
+              <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
             </button>
           </div>
         </header>
@@ -235,42 +235,35 @@ export function BentoHero({ onContact }: { onContact?: () => void }) {
 
             {/* Cards 20K+ e Serviços */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 lg:gap-5">
-              {/* 20K+ */}
-              <article className="relative overflow-hidden rounded-[28px] border border-white/[0.08] bg-gradient-to-br from-[#1A0D2E] to-[#0D0618] p-6 lg:p-7 min-h-[190px] flex flex-col">
-                <span className="w-9 h-9 rounded-full bg-violet-500/20 border border-violet-400/30 flex items-center justify-center mb-4">
-                  <TrendingUp className="w-4 h-4 text-violet-300 rotate-[-18deg]" />
-                </span>
-                <span className="text-3xl lg:text-[34px] font-extrabold tracking-tight text-white">10K+</span>
-                <span className="text-xs text-zinc-400 mt-1">{t.followersLabel}</span>
-                {/* linha */}
-                <svg className="mt-auto pt-4 w-full" viewBox="0 0 160 40" fill="none">
-                  <path
-                    d="M4 32 C30 30, 48 22, 68 24 C88 26, 104 12, 124 14 C138 15, 148 8, 156 6"
-                    stroke="#A855F7"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                  />
-                  <circle cx="156" cy="6" r="4" fill="#A855F7" />
-                  <circle cx="156" cy="6" r="8" fill="#A855F7" opacity="0.25" />
-                </svg>
+              {/* Conteúdo que engaja */}
+              <article className="relative overflow-hidden rounded-[28px] border border-white/[0.08] bg-gradient-to-br from-[#1A0D2E] to-[#0D0618] p-4 lg:p-5">
+                <div className="flex items-start justify-between">
+                  <div>
+                    <span className="w-8 h-8 rounded-full bg-violet-500/20 border border-violet-400/30 flex items-center justify-center mb-3">
+                      <TrendingUp className="w-3.5 h-3.5 text-violet-300 rotate-[-18deg]" />
+                    </span>
+                    <span className="text-base sm:text-lg font-semibold tracking-tight text-purple-300 block mt-2">Crescimento real</span>
+                    <span className="text-[10px] sm:text-xs text-zinc-400 mt-1">{t.followersLabel}</span>
+                  </div>
+                </div>
               </article>
 
               {/* Serviços */}
-              <article className="relative overflow-hidden rounded-[28px] border border-white/[0.08] bg-gradient-to-br from-[#1A0D2E] to-[#0D0618] p-6 lg:p-7">
-                <div className="flex items-center gap-2 mb-5">
-                  <Sparkles className="w-4 h-4 text-fuchsia-400" />
-                  <h3 className="text-sm font-semibold text-white">{t.myServices}</h3>
+              <article className="relative overflow-hidden rounded-[28px] border border-white/[0.08] bg-gradient-to-br from-[#1A0D2E] to-[#0D0618] p-4 lg:p-5">
+                <div className="flex items-center gap-2 mb-4">
+                  <Sparkles className="w-3.5 h-3.5 text-fuchsia-400" />
+                  <h3 className="text-xs sm:text-sm font-semibold text-white">{t.myServices}</h3>
                 </div>
-                <ul className="space-y-3.5">
+                <ul className="space-y-3">
                   {[
                     { icon: BarChart3, text: t.serviceItems[0] },
                     { icon: Video, text: t.serviceItems[1] },
                     { icon: Target, text: t.serviceItems[2] },
                     { icon: Lightbulb, text: t.serviceItems[3] },
                   ].map((s) => (
-                    <li key={s.text} className="flex items-center gap-3 text-[13px] text-zinc-200 leading-tight">
-                      <span className="w-9 h-9 shrink-0 rounded-xl border border-white/[0.1] bg-white/[0.04] flex items-center justify-center">
-                        <s.icon className="w-4 h-4 text-zinc-200" />
+                    <li key={s.text} className="flex items-center gap-2.5 text-[12px] sm:text-[13px] text-zinc-200 leading-tight">
+                      <span className="w-8 h-8 shrink-0 rounded-xl border border-white/[0.1] bg-white/[0.04] flex items-center justify-center">
+                        <s.icon className="w-3.5 h-3.5 text-zinc-200" />
                       </span>
                       {s.text}
                     </li>
@@ -278,33 +271,23 @@ export function BentoHero({ onContact }: { onContact?: () => void }) {
                 </ul>
                 <button
                   onClick={() => scrollTo(1)}
-                  className="group mt-6 inline-flex items-center gap-1.5 text-sm text-violet-400 hover:text-violet-300 font-medium transition-colors"
+                  className="group mt-5 inline-flex items-center gap-1 text-sm text-violet-400 hover:text-violet-300 font-medium transition-colors"
                 >
                   {t.learnMore}
-                  <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
+                  <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
                 </button>
               </article>
             </div>
 
-            {/* 200K+ */}
-            <article className="relative overflow-hidden rounded-[28px] border border-white/[0.08] bg-gradient-to-br from-[#1A0D2E] to-[#0D0618] p-6 lg:p-7">
+            {/* Alcance qualificado */}
+            <article className="relative overflow-hidden rounded-[28px] border border-white/[0.08] bg-gradient-to-br from-[#1A0D2E] to-[#0D0618] p-8 lg:p-10">
               <div className="flex items-start justify-between">
                 <div>
-                  <span className="w-9 h-9 rounded-full bg-violet-500 flex items-center justify-center mb-4 shadow-[0_0_20px_rgba(168,85,247,0.5)]">
-                    <Play className="w-4 h-4 text-white fill-white ml-0.5" />
+                  <span className="w-10 h-10 rounded-full bg-violet-500 flex items-center justify-center mb-5 shadow-[0_0_24px_rgba(168,85,247,0.5)]">
+                    <Play className="w-4.5 h-4.5 text-white fill-white ml-0.5" />
                   </span>
-                  <div className="text-3xl lg:text-[34px] font-extrabold tracking-tight text-white">50K+</div>
-                  <div className="text-xs text-zinc-400 mt-1">{t.viewsLabel}</div>
-                </div>
-                {/* barras */}
-                <div className="flex items-end gap-1.5 h-[72px] pt-6">
-                  {[18, 28, 22, 38, 34, 52, 48, 68].map((h, i) => (
-                    <span
-                      key={i}
-                      style={{ height: `${h}%` }}
-                      className={`w-1.5 rounded-full ${i >= 6 ? "bg-gradient-to-t from-violet-600 to-fuchsia-400" : "bg-violet-800/70"}`}
-                    />
-                  ))}
+                  <div className="text-lg sm:text-xl font-semibold tracking-tight text-purple-300">Alcance profissional</div>
+                  <div className="text-[10px] sm:text-xs text-zinc-400 mt-1">{t.viewsLabel}</div>
                 </div>
               </div>
             </article>
